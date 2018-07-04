@@ -1,11 +1,10 @@
 ---
-title: "NDC Messages"
+title: "NDC Methods"
 weight: 6
 pre: "6 . "
 ---
 
-NDC Messages available
-----
+##NDC Methods available
 
 This is a list of NDC valid requests in our **v1** version of the API.
 
