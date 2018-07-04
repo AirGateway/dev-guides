@@ -4,3 +4,23 @@ backend:
 
 media_folder: "static/images" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/images" # The src attribute for uploaded media will begin with /images/uploads
+
+# Collections
+collections: # A list of collections the CMS should be able to edit
+  - name: "home"
+    label: "Home"
+    folder: "content/home"
+    create: false
+    slug: "_index"
+    fields:
+      - {label: "Favicon", name: "favicon", widget: "image"}
+      - {label: "Favicon Width", name: "favicon_width", widget: "number", default: 40, min: 0, max: 200}
+      - {label: "Favicon Height", name: "favicon_height", widget: "number", default: 40, min: 0, max: 200}
+      - {label: "API Dashboard Menu option", name: "menuapidashboard", widget: "string"}
+      - {label: "Edit Profile Menu option", name: "menueditprofile", widget: "string"}
+      - {label: "Menu log out", name: "menulogout", widget: "string"}
+      - {label: "Footer legend", name: "footerlegend", widget: "markdown"}
+      - {label: "Account menu option", name: "account", widget: "string"}
+      - {label: "Jumbo Title", name: "jumbotitle", widget: "string"}
+      - {label: "View APIs link", name: "viewapis", widget: "string"}
+      - {label: "Background image", name: "backgroundimage", widget: "image"}
