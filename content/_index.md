@@ -1,5 +1,3 @@
-v0.8.0
-
 AirGateway NDC Gateway Developer Guide
 ====================
 
