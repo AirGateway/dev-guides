@@ -19,7 +19,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "Messages Available"
     label: "Messages Available"
-    folder: "content/basic/messages\ available"
+    folder: "content/basic/messages_available"
     create: false
     slug: "_index"
     fields:
@@ -29,7 +29,37 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "MPR"
     label: "MPR"
-    folder: "content/basic/multi-provider\ requests"
+    folder: "content/basic/multi-provider_requests"
+    create: false
+    slug: "_index"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Weight", name: "weight", widget: "number"}
+      - {label: "Menu pre-text", name: "pre", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "Sending Requests"
+    label: "Sending Requests"
+    folder: "content/basic/sending_requests_to_our_NDC_Gateway"
+    create: false
+    slug: "_index"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Weight", name: "weight", widget: "number"}
+      - {label: "Menu pre-text", name: "pre", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "SPR"
+    label: "SPR"
+    folder: "content/basic/single-provider_requests"
+    create: false
+    slug: "_index"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Weight", name: "weight", widget: "number"}
+      - {label: "Menu pre-text", name: "pre", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "Swagger docs list"
+    label: "Swagger docs list"
+    folder: "content/basic/swagger_docs"
     create: false
     slug: "_index"
     fields:
