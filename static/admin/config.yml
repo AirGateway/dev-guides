@@ -7,6 +7,16 @@ public_folder: "/images" # The src attribute for uploaded media will begin with 
 
 # Collections
 collections: # A list of collections the CMS should be able to edit
+  - name: "Basic"
+    label: "Basic"
+    folder: "content/basic"
+    create: false
+    slug: "_index"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Weight", name: "weight", widget: "number"}
+      - {label: "Menu pre-text", name: "pre", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
   - name: "Authentication"
     label: "Authentication"
     folder: "content/basic/authentication"
@@ -60,6 +70,36 @@ collections: # A list of collections the CMS should be able to edit
   - name: "Swagger docs list"
     label: "Swagger docs list"
     folder: "content/basic/swagger_docs"
+    create: false
+    slug: "_index"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Weight", name: "weight", widget: "number"}
+      - {label: "Menu pre-text", name: "pre", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "Providers"
+    label: "Providers"
+    folder: "content/providers"
+    create: false
+    slug: "_index"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Weight", name: "weight", widget: "number"}
+      - {label: "Menu pre-text", name: "pre", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "Cabin Preferences"
+    label: "Cabin Preferences"
+    folder: "content/providers/cabin_preferences"
+    create: false
+    slug: "_index"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Weight", name: "weight", widget: "number"}
+      - {label: "Menu pre-text", name: "pre", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "Fare Preferences"
+    label: "Fare Preferences"
+    folder: "content/providers/fare_preferences"
     create: false
     slug: "_index"
     fields:
