@@ -18,7 +18,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Menu pre-text", name: "pre", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "Authentication"
-    label: "Authentication"
+    label: "Basic / Authentication"
     folder: "content/basic/authentication"
     create: false
     slug: "_index"
@@ -28,7 +28,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Menu pre-text", name: "pre", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "Messages Available"
-    label: "Messages Available"
+    label: "Basic / Messages Available"
     folder: "content/basic/messages_available"
     create: false
     slug: "_index"
@@ -37,8 +37,8 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Weight", name: "weight", widget: "number"}
       - {label: "Menu pre-text", name: "pre", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
-  - name: "MPR Name"
-    label: "MPR Label"
+  - name: "MPR"
+    label: "Basic / MPR"
     folder: "content/basic/multi-provider_requests"
     create: false
     slug: "_index"
@@ -48,7 +48,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Menu pre-text", name: "pre", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "Sending Requests"
-    label: "Sending Requests"
+    label: "Basic / Sending Requests"
     folder: "content/basic/sending_requests_to_our_NDC_Gateway"
     create: false
     slug: "_index"
@@ -58,7 +58,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Menu pre-text", name: "pre", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "SPR"
-    label: "SPR"
+    label: "Basic / SPR"
     folder: "content/basic/single-provider_requests"
     create: false
     slug: "_index"
@@ -68,7 +68,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Menu pre-text", name: "pre", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "Swagger docs list"
-    label: "Swagger docs list"
+    label: "Basic / Swagger docs list"
     folder: "content/basic/swagger_docs"
     create: false
     slug: "_index"
@@ -88,7 +88,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Menu pre-text", name: "pre", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "Cabin Preferences"
-    label: "Cabin Preferences"
+    label: "Providers / Cabin Preferences"
     folder: "content/providers/cabin_preferences"
     create: false
     slug: "_index"
@@ -98,7 +98,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Menu pre-text", name: "pre", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "Fare Preferences"
-    label: "Fare Preferences"
+    label: "Providers / Fare Preferences"
     folder: "content/providers/fare_preferences"
     create: false
     slug: "_index"

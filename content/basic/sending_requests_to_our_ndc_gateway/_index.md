@@ -1,5 +1,5 @@
 ---
-title: "Sennding requests"
+title: "Sending requests"
 weight: 2
 pre: "2 . "
 ---
