@@ -16,3 +16,4 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Weight", name: "weight", widget: "number"}
       - {label: "Menu pre-text", name: "pre", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
