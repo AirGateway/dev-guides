@@ -37,8 +37,8 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Weight", name: "weight", widget: "number"}
       - {label: "Menu pre-text", name: "pre", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
-  - name: "MPR"
-    label: "MPR"
+  - name: "MPR Name"
+    label: "MPR Label"
     folder: "content/basic/multi-provider_requests"
     create: false
     slug: "_index"
