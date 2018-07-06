@@ -40,13 +40,13 @@ url = "https://dev.airgateway.net"
 weight = 9
 
 [[menu.shortcuts]]
-name = "<i class='fa fa-list'></i> Swagger JSON API v1"
+name = "<i class='fa fa-list'></i> NDC JSON API v1"
 identifier = "sw10"
 url = "https://api.airgateway.net/v1/swagger-ui/"
 weight = 10
 
 [[menu.shortcuts]]
-name = "<i class='fa fa-list'></i> Swagger JSON API v1.1"
+name = "<i class='fa fa-list'></i> NDC JSON API v1.1"
 identifier = "sw11"
 url = "https://api.airgateway.net/v1.1/swagger-ui/"
 weight = 11
