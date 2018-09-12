@@ -11,14 +11,14 @@ List of cabin preferences values accepted by provider:
 
 | Provider      | 1 | 2 | 3	| 4 | 5 |	6 |	7 |
 | ------------- |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| A3            | YES | YES |  |  | YES |  |  |
-| AA            | YES | YES |  |  | YES |  |  |
-| BA            | YES | YES |  | YES | YES |  |  |
-| EK            | YES | YES |  |  | YES |  |  |
-| IB            | YES | YES |  | YES | YES |  |  |
-| LH            | YES | YES |  |  | YES |  |  |
-| S7            |  | YES |  |  | YES |  |  |
-| WS            | YES | YES |  |  | YES |  |  |
+| A3            | YES | YES |   |     | YES |  | YES |
+| AA            | YES | YES |   |     | YES |  | YES |
+| BA            | YES | YES |   | YES | YES |  | YES |
+| EK            | YES | YES |   |     | YES |  | YES |
+| IB            | YES | YES |   | YES | YES |  | YES |
+| LH            | YES | YES |   |     | YES |  | YES |
+| S7            |     | YES |   |     | YES |  | YES |
+| WS            | YES | YES |   |     | YES |  | YES |
 
 1. First
 2. Business
