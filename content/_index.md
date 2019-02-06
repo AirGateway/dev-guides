@@ -18,7 +18,7 @@ Also transitioning among different NDC versions/implementations will be a  much 
 
 References and Links
 -----------
-To use our **NDC JSON API** you must sign up in our developer portal:
+To use our **NDC JSON API** you must sign up in our agencies portal:
 
 * [Agencies Portal](https://agency.airgateway.net/)
 
