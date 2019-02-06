@@ -20,7 +20,7 @@ References and Links
 -----------
 To use our **NDC JSON API** you must sign up in our developer portal:
 
-* [Developer Portal](https://dev.airgateway.net/)
+* [Agencies Portal](https://agency.airgateway.net/)
 
 We use a self-documented API Framework that produces always-up to date Swagger Documentation. This live-documentation can be found here.
 
