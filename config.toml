@@ -35,8 +35,8 @@ home = [ "HTML", "RSS", "JSON"]
 
 
 [[menu.shortcuts]]
-name = "<i class='fa fa-keyboard-o'></i> Dev Portal"
-url = "https://dev.airgateway.net"
+name = "<i class='fa fa-keyboard-o'></i> Agencies Portal"
+url = "https://agency.airgateway.net"
 weight = 9
 
 [[menu.shortcuts]]
