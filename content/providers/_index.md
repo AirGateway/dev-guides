@@ -1,12 +1,36 @@
 ---
-title: "Providers Specifications"
-weight: 2
+title: "Providers List"
+weight: 3
 chapter: true
 ---
 
-Providers Specifications
+Providers List
 ================
 
-Not every provider implements the NDC standard the same way, and even with our big effort in starndarization and homogenization, some providers have differences between them.
+This is a table of our Providers (Airlines) content displaying their capabilities supported through our aggregation platform.
 
-For instance, not all providers accept every cabin preference filters (some won't have Premium Economy).
+
+| Provider      | Shopping | Booking | Ticketing | Cancel & Refund | Services | Changes | FOP |
+| ------------- |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| **BA**        | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: :fork_and_knife: | :date: | BSP :credit_card: | 
+| **IB**        | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | :date: | BSP :credit_card: | 
+| **LH**        | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | :date: | BSP | 
+| **LX**        | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | :date: | BSP | 
+| **OS**        | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | :date: | BSP | 
+| **SN**        | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | :date: | BSP | 
+| **AA**        | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | :date: | BSP :credit_card: | 
+| **UA**        | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | :date: | BSP :credit_card: | 
+| **A3**        | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | :date: | BSP :credit_card: | 
+| **AF**        | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | - | BSP | 
+| **KL**        | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | - | BSP | 
+| **EK**        | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | - | BSP | 
+| **WS**        | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | :date: | BSP :credit_card: | 
+| **WS**        | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | - | BSP :credit_card: | 
+| **SQ**        | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | - | BSP :credit_card: | 
+| **AY**        | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | - | BSP :credit_card: | 
+
+--------------------
+
+### Icons
+
+:seat: Seat selection |  :baggage_claim: Extra Baggage | :date: Change flight dates | :credit_card: Credit card payment
