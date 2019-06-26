@@ -1,7 +1,8 @@
 baseURL = "https://dev-guides.airgateway.net/"
 languageCode = "en-us"
-title = "AirGateway dev guides"
+title = "AirGateway NDC APIs Development Guide"
 theme = "hugo-theme-learn"
+enableEmoji = true
 
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
@@ -35,31 +36,19 @@ home = [ "HTML", "RSS", "JSON"]
 
 
 [[menu.shortcuts]]
-name = "<i class='fa fa-keyboard-o'></i> Agencies Portal"
+name = "<i class='fa fa-keyboard-o'></i> Agency Portal"
 url = "https://agency.airgateway.net"
-weight = 9
+weight = 20
 
 [[menu.shortcuts]]
-name = "<i class='fa fa-list'></i> NDC JSON API v1"
-identifier = "sw10"
-url = "https://api.airgateway.net/v1/swagger-ui/"
-weight = 10
-
-[[menu.shortcuts]]
-name = "<i class='fa fa-list'></i> NDC JSON API v1.1"
-identifier = "sw11"
-url = "https://api.airgateway.net/v1.1/swagger-ui/"
-weight = 11
-
-[[menu.shortcuts]]
-name = "<i class='fa fa-bookmark'></i> Postman Documentation"
+name = "<i class='fa fa-bookmark'></i> Postman Samples"
 identifier = "postmandoc"
 url = "https://docs.airgateway.net/"
-weight = 20
+weight = 30
 
 [[menu.shortcuts]]
-name = "<i class='fa fa-comments-o'></i> Support"
+name = "<i class='fa fa-comments-o'></i> Gitter Support Chat"
 identifier = "support"
 url = "https://gitter.im/AirGateway/Lobby"
-weight = 20
+weight = 31
 

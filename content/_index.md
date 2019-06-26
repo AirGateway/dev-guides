@@ -1,9 +1,9 @@
 ---
-title: "Dev Guide"
+title: "Home"
 weight: 1
 ---
 
-AirGateway NDC Gateway Developer Guide
+AirGateway NDC JSON API Developer Guide
 ====================
 
 This is a developer guide intended to provide insights on a technical integration with AirGateway's **NDC JSON API** aggregation service.
