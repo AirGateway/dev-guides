@@ -4,8 +4,6 @@ weight: 3
 pre: "3 . "
 ---
 
-## MPR (Multi-Provider requests)
-
 This requests are basically restricted to one single NDC method call (**AirShopping**) since it's the only NDC method that makes sense to be concurrently requested to multiple NDC providers.
 
 To execute a MPR you only need send a valid standard NDC **AirShopping** request including an HTTP header like this:

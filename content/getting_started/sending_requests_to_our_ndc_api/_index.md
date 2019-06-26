@@ -4,8 +4,6 @@ weight: 2
 pre: "2 . "
 ---
 
-## Sending requests to our NDC Gateway
-
 We use **HTTP/1.1** as communication protocol to accept requests to the gateway. All NDC requests are sent using the **POST** HTTP method.
 
 The public endpoint to our **NDC Gateway** remains immutable for all NDC requests and it is:

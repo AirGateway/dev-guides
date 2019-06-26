@@ -4,8 +4,6 @@ weight: 4
 pre: "4 . "
 ---
 
-## SPR (Single provider requests)
-
 All non-AirShopping NDC requests are considered SPR. This means:
 
 - FlightPrice
