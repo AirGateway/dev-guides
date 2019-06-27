@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="description" content="AirGateway dev guides">
+<meta name="author" content="AirGateway">
+
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<link rel="icon" href="/images/favicon.png" type="image/x-icon" />
+    <title>Sending requests :: AirGateway dev guides</title>
+
+    
+    <link href="/css/nucleus.css?1561453128" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1561453128" rel="stylesheet">
+    <link href="/css/hybrid.css?1561453128" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1561453128" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1561453128" rel="stylesheet">
+    <link href="/css/auto-complete.css?1561453128" rel="stylesheet">
+    <link href="/css/theme.css?1561453128" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1561453128" rel="stylesheet">
+    
+
+    <script src="/js/jquery-2.x.min.js?1561453128"></script>
+
+    <style type="text/css">
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-77281199-4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-77281199-4');
+    </script>
+
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  </head>
+  <body class="" data-url="/basic/sending_requests_to_our_ndc_gateway/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://dev-guides.airgateway.net">
+  <i class="i-sprite-logo-airgateway hidden"></i>
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fa fa-search"></i></label>
+    <input data-search-input id="search-by" type="text" placeholder="Search...">
+    <span data-search-clear=""><i class="fa fa-close"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1561453128"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1561453128"></script>
+<script type="text/javascript">
+    
+        var baseurl = '\/';
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1561453128"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/basic/" title="Basic info" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/basic/">
+          Basic info
+          
+            <i class="fa fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/basic/authentication/" title="Authentication" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/basic/authentication/">
+          1 . Authentication
+          
+            <i class="fa fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/basic/sending_requests_to_our_ndc_gateway/" title="Sending requests" class="dd-item 
+        parent
+        active
+        
+        ">
+      <a href="/basic/sending_requests_to_our_ndc_gateway/">
+          2 . Sending requests
+          
+            <i class="fa fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/basic/multi-provider_requests/" title="Multi-provider requests" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/basic/multi-provider_requests/">
+          3 . Multi-provider requests
+          
+            <i class="fa fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/basic/single-provider_requests/" title="Single Provider Requests" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/basic/single-provider_requests/">
+          4 . Single Provider Requests
+          
+            <i class="fa fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/basic/messages_available/" title="NDC Methods" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/basic/messages_available/">
+          6 . NDC Methods
+          
+            <i class="fa fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/basic/swagger_docs/" title="NDC JSON API Versions" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/basic/swagger_docs/">
+          7 . NDC JSON API Versions
+          
+            <i class="fa fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/providers/" title="Providers Specifications" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/providers/">
+          Providers Specifications
+          
+            <i class="fa fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/providers/cabin_preferences/" title="Cabin Preferences" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/providers/cabin_preferences/">
+          Cabin Preferences
+          
+            <i class="fa fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/providers/fare_preferences/" title="Fare Preferences" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/providers/fare_preferences/">
+          Fare Preferences
+          
+            <i class="fa fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>Important links</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://agency.airgateway.net"><i class='fa fa-keyboard-o'></i> Agencies Portal</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://api.airgateway.net/v1/swagger-ui/"><i class='fa fa-list'></i> NDC JSON API v1</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://api.airgateway.net/v1.1/swagger-ui/"><i class='fa fa-list'></i> NDC JSON API v1.1</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://docs.airgateway.net/"><i class='fa fa-bookmark'></i> Postman Documentation</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://gitter.im/AirGateway/Lobby"><i class='fa fa-comments-o'></i> Support</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+       
+      
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fa fa-fw fa-history"></i> Clear History</a></li>         
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <p>Made with <a href="http://gohugo.io/">Hugo</a>. <a href="http://getgrav.org">Grav</a> based <a href="https://github.com/matcornic/hugo-theme-learn"> theme</a>.</p>
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Dev Guide</a> > <a href='/basic/'>Basic info</a> > Sending requests
+          
+        
+          
+        
+          
+        
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#sending-requests-to-our-ndc-gateway">Sending requests to our NDC Gateway</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+
+        
+        <div id="body-inner">
+          
+            <h1>Sending requests</h1>
+          
+
+        
+
+
+
+
+<h2 id="sending-requests-to-our-ndc-gateway">Sending requests to our NDC Gateway</h2>
+
+<p>We use <strong>HTTP/1.1</strong> as communication protocol to accept requests to the gateway. All NDC requests are sent using the <strong>POST</strong> HTTP method.</p>
+
+<p>The public endpoint to our <strong>NDC Gateway</strong> remains immutable for all NDC requests and it is:</p>
+
+<ul>
+<li><strong>Version 1</strong>: <a href="https://proxy.airgateway.net/v1/">https://proxy.airgateway.net/v1/</a></li>
+<li><strong>Version 1.1</strong>: <a href="https://proxy.airgateway.net/v1.1/">https://proxy.airgateway.net/v1.1/</a></li>
+</ul>
+
+<p>We require some mandatory basic HTTP headers intended for message formatting:</p>
+
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: application/json</li>
+<li><strong>Authorization</strong>: XXXXXXXXXXXXX. You&rsquo;ll have to send your API token here or you won&rsquo;t be able to use AirGateway.</li>
+</ul>
+
+<p>We accept some extra headers to change default behaviour:</p>
+
+<ul>
+<li><strong>AG-Providers</strong>: value. Check multi-provider and single-provider requests pages for more information. You&rsquo;ll use &ldquo;*&rdquo; to request all your providers offers and the IATA code to select specific airlines (BA, IB, AA, LH&hellip;).</li>
+<li><strong>AG-Connection</strong>: keep-alive. This will return data streamed as soon as we receive the response from the airlines instead of waiting to have all airlines responses before returning data.</li>
+<li><strong>AG-Session-ID</strong>: XXXXX-XXXXX-XXXXXX. With the first request for a session (usually, an AirShopping) you&rsquo;ll receive a <strong>AG-Session-ID</strong> header in response. You should use this header to allow us track full sessions combined with next header.</li>
+<li><strong>AG-Trace</strong>: true. This is only accepted in sandbox environment and should only be used for debug purposes. If you experience any issue, please send your example requests with this header and using the same <strong>AG-Session-ID</strong> header. Then please, share the <strong>AG-Session-ID</strong> with us when reporting issue.</li>
+<li><strong>AG-Per-Provider-Limit</strong>: max number of offers received for each provider.</li>
+</ul>
+
+<p>It&rsquo;s very relevant to distinguish between two types of requests to send to the <strong>NDC Gateway</strong>. Attending to the architecture, we have two types of requests with significant differences between them:</p>
+
+<ul>
+<li><strong>MPR</strong> (Multiple provider requests)</li>
+<li><strong>SPR</strong> (Single provider requests)</li>
+</ul>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+        
+            <a class="nav nav-prev" href="/basic/authentication/" title="Authentication"> <i class="fa fa-chevron-left"></i></a>
+        
+        
+            <a class="nav nav-next" href="/basic/multi-provider_requests/" title="Multi-provider requests" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1561453128"></script>
+    <script src="/js/perfect-scrollbar.min.js?1561453128"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1561453128"></script>
+    <script src="/js/jquery.sticky.js?1561453128"></script>
+    <script src="/js/featherlight.min.js?1561453128"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1561453128"></script>
+    <script src="/js/highlight.pack.js?1561453128"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom.71422.js?1561453128"></script>
+    <script src="/js/learn.js?1561453128"></script>
+    <script src="/js/hugo-learn.js?1561453128"></script>
+
+    <link href="/mermaid/mermaid.css?1561453128" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1561453128"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+
+    <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+            if (!user) {
+                window.netlifyIdentity.on("login", () => {
+                document.location.href = "/admin/";
+                });
+            }
+            });
+        }
+    </script>
+  </body>
+</html>
+
+

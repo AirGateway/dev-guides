@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://dev-guides.airgateway.net/getting_started/authentication/</loc>
+  </url>
+  
+  <url>
+    <loc>https://dev-guides.airgateway.net/getting_started/</loc>
+  </url>
+  
+  <url>
+    <loc>https://dev-guides.airgateway.net/</loc>
+  </url>
+  
+  <url>
+    <loc>https://dev-guides.airgateway.net/ndc_json_api_docs/</loc>
+  </url>
+  
+  <url>
+    <loc>https://dev-guides.airgateway.net/getting_started/sending_requests_to_our_ndc_api/</loc>
+  </url>
+  
+  <url>
+    <loc>https://dev-guides.airgateway.net/getting_started/multi-provider_requests/</loc>
+  </url>
+  
+  <url>
+    <loc>https://dev-guides.airgateway.net/providers/</loc>
+  </url>
+  
+  <url>
+    <loc>https://dev-guides.airgateway.net/getting_started/single-provider_requests/</loc>
+  </url>
+  
+  <url>
+    <loc>https://dev-guides.airgateway.net/getting_started/api_docs/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev-guides.airgateway.net/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev-guides.airgateway.net/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

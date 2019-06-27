@@ -1,0 +1,110 @@
+backend:
+  name: gitlab
+  repo: AirGateway/dev-guides
+  branch: master
+
+media_folder: "static/images" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/images" # The src attribute for uploaded media will begin with /images/uploads
+
+# Collections
+collections: # A list of collections the CMS should be able to edit
+  - name: "Basic"
+    label: "Basic"
+    folder: "content/basic"
+    create: false
+    slug: "_index"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Weight", name: "weight", widget: "number"}
+      - {label: "Menu pre-text", name: "pre", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "Authentication"
+    label: "Basic / Authentication"
+    folder: "content/basic/authentication"
+    create: false
+    slug: "_index"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Weight", name: "weight", widget: "number"}
+      - {label: "Menu pre-text", name: "pre", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "Messages Available"
+    label: "Basic / Messages Available"
+    folder: "content/basic/messages_available"
+    create: false
+    slug: "_index"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Weight", name: "weight", widget: "number"}
+      - {label: "Menu pre-text", name: "pre", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "MPR"
+    label: "Basic / MPR"
+    folder: "content/basic/multi-provider_requests"
+    create: false
+    slug: "_index"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Weight", name: "weight", widget: "number"}
+      - {label: "Menu pre-text", name: "pre", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "Sending Requests"
+    label: "Basic / Sending Requests"
+    folder: "content/basic/sending_requests_to_our_NDC_Gateway"
+    create: false
+    slug: "_index"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Weight", name: "weight", widget: "number"}
+      - {label: "Menu pre-text", name: "pre", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "SPR"
+    label: "Basic / SPR"
+    folder: "content/basic/single-provider_requests"
+    create: false
+    slug: "_index"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Weight", name: "weight", widget: "number"}
+      - {label: "Menu pre-text", name: "pre", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "Swagger docs list"
+    label: "Basic / Swagger docs list"
+    folder: "content/basic/swagger_docs"
+    create: false
+    slug: "_index"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Weight", name: "weight", widget: "number"}
+      - {label: "Menu pre-text", name: "pre", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "Providers"
+    label: "Providers"
+    folder: "content/providers"
+    create: false
+    slug: "_index"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Weight", name: "weight", widget: "number"}
+      - {label: "Menu pre-text", name: "pre", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "Cabin Preferences"
+    label: "Providers / Cabin Preferences"
+    folder: "content/providers/cabin_preferences"
+    create: false
+    slug: "_index"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Weight", name: "weight", widget: "number"}
+      - {label: "Menu pre-text", name: "pre", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "Fare Preferences"
+    label: "Providers / Fare Preferences"
+    folder: "content/providers/fare_preferences"
+    create: false
+    slug: "_index"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Weight", name: "weight", widget: "number"}
+      - {label: "Menu pre-text", name: "pre", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
