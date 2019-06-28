@@ -10,5 +10,15 @@
 	<atom:link href="https://dev-guides.airgateway.net/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Providers List</title>
+      <link>https://dev-guides.airgateway.net/providers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev-guides.airgateway.net/providers/</guid>
+      <description>Providers List This is a table of our Providers (Airlines) content displaying their capabilities supported through our aggregation platform.
+   Provider Shopping Booking Ticketing Cancel &amp;amp; Refund Services Changes FOP     BA ✅ ✅ ✅ ✅ 💺 🛄 🍴 📅 BSP 💳   IB ✅ ✅ ✅ ✅ 💺 🛄 📅 BSP, 💳   LH ✅ ✅ ✅ ✅ 💺 🛄 📅 BSP, 💳   LX ✅ ✅ ✅ ✅ 💺 🛄 📅 BSP, 💳   OS ✅ ✅ ✅ ✅ 💺 🛄 📅 BSP, 💳   SN ✅ ✅ ✅ ✅ 💺 🛄 📅 BSP, 💳   AA ✅ ✅ ✅ ✅ 💺 🛄 📅 BSP, 💳   UA ✅ ✅ ✅ ✅ 💺 🛄 📅 BSP, 💳   A3 ✅ ✅ ✅ ✅ 💺 🛄 📅 BSP, 💳   AF ✅ ✅ ✅ ✅ 💺 🛄 - BSP   KL ✅ ✅ ✅ ✅ 💺 🛄 - BSP   EK ✅ ✅ ✅ ✅ 💺 🛄 - BSP   WS ✅ ✅ ✅ ✅ 💺 🛄 📅 BSP, 💳   WS ✅ ✅ ✅ ✅ 💺 🛄 - BSP, 💳   SQ ✅ ✅ ✅ ✅ 💺 🛄 - BSP, 💳   AY ✅ ✅ ✅ ✅ 💺 🛄 - BSP, 💳   EY 🔜         SV 🔜         WY 🔜         QF 🔜         VY 🔜         DY 🔜         EI 🔜         I2 🔜          Icons 💺 Seat selection | 🛄 Extra Baggage | 📅 Change flight dates | 💳 Credit card payment</description>
+    </item>
+    
   </channel>
 </rss>
