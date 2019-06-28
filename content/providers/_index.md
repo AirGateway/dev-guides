@@ -3,9 +3,6 @@ title: "Providers List"
 weight: 0
 ---
 
-Providers List
-================
-
 This is a table of our Providers (Airlines) content displaying their capabilities supported through our aggregation platform.
 
 
@@ -27,14 +24,14 @@ This is a table of our Providers (Airlines) content displaying their capabilitie
 | **WS**        | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | - | BSP, :credit_card: | 
 | **SQ**        | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | - | BSP, :credit_card: | 
 | **AY**        | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | - | BSP, :credit_card: | 
-| **EY**        | :soon: |  |  |  |  |  |  | 
-| **SV**        | :soon: |  |  |  |  |  |  | 
-| **WY**        | :soon: |  |  |  |  |  |  | 
-| **QF**        | :soon: |  |  |  |  |  |  | 
-| **VY**        | :soon: |  |  |  |  |  |  | 
-| **DY**        | :soon: |  |  |  |  |  |  | 
-| **EI**        | :soon: |  |  |  |  |  |  | 
-| **I2**        | :soon: |  |  |  |  |  |  |
+| **EY**        | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: | 
+| **SV**        | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: | 
+| **WY**        | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: | 
+| **QF**        | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: | 
+| **VY**        | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: | 
+| **DY**        | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: | 
+| **EI**        | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: | 
+| **I2**        | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
 -------------
 
 ### Icons
