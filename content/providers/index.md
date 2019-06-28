@@ -1,7 +1,6 @@
 ---
 title: "Providers List"
-weight: 3
-chapter: true
+weight: 0
 ---
 
 Providers List
