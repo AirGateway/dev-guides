@@ -1,6 +1,6 @@
 ---
 title: "Providers List"
-weight: 0
+weight: 6
 ---
 
 This is a table of our Providers (Airlines) content displaying their capabilities supported through our aggregation platform.
