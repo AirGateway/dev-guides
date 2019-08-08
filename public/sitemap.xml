@@ -23,7 +23,15 @@
   </url>
   
   <url>
+    <loc>https://dev-guides.airgateway.net/hub_api_docs/</loc>
+  </url>
+  
+  <url>
     <loc>https://dev-guides.airgateway.net/getting_started/multi-provider_requests/</loc>
+  </url>
+  
+  <url>
+    <loc>https://dev-guides.airgateway.net/bookingpad/</loc>
   </url>
   
   <url>
@@ -31,17 +39,12 @@
   </url>
   
   <url>
-    <loc>https://dev-guides.airgateway.net/getting_started/api_docs/</loc>
-    <priority>0</priority>
+    <loc>https://dev-guides.airgateway.net/providers/</loc>
   </url>
   
   <url>
     <loc>https://dev-guides.airgateway.net/categories/</loc>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dev-guides.airgateway.net/providers/</loc>
   </url>
   
   <url>

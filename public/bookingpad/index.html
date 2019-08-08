@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>NDC JSON APIs Docs :: AirGateway NDC APIs Development Guide</title>
+    <title>Bookingpad :: AirGateway NDC APIs Development Guide</title>
 
     
     <link href="/css/nucleus.css?1565277339" rel="stylesheet">
@@ -44,7 +44,7 @@
 
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
-  <body class="" data-url="/ndc_json_api_docs/">
+  <body class="" data-url="/bookingpad/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -227,8 +227,8 @@
   
     
     <li data-nav-id="/ndc_json_api_docs/" title="NDC JSON APIs Docs" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/ndc_json_api_docs/">
@@ -275,8 +275,8 @@
   
     
     <li data-nav-id="/bookingpad/" title="Bookingpad" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/bookingpad/">
@@ -388,7 +388,7 @@
             
           
           
-            <a href='/'>Home</a> > NDC JSON APIs Docs
+            <a href='/'>Home</a> > Bookingpad
           
         
           
@@ -410,19 +410,40 @@
         
         <div id="body-inner">
           
-            <h1>NDC JSON APIs Docs</h1>
+            <h1>Bookingpad</h1>
           
 
         
 
 
-<p>These are existing versions of our NDC JSON API:</p>
+<p>As part of our services, we have implemented a frontend-only angular application which uses our NDC JSON API.</p>
 
-<ul>
-<li><strong>V1.0</strong> <a href="https://api.airgateway.net/v1/">https://api.airgateway.net/v1/</a> (<a href="https://api.airgateway.net/v1/swagger-ui/">docs</a>) (Soon to be deprecated)</li>
-<li><strong>V1.1</strong> <a href="https://api.airgateway.net/v1.1/">https://api.airgateway.net/v1.1/</a> (<a href="https://api.airgateway.net/v1.1/swagger-ui/">docs</a>)</li>
-<li><strong>V1.2</strong> (Coming soon)</li>
-</ul>
+<p>You can use this tool directly as an example to see the examples on how to use our API, using your credentials (agent username, agency and password), here:
+* <a href="https://app.airgateway.net/">https://app.airgateway.net/</a></p>
+
+<p>This tool is open source so you can use it the way you prefer or even fork it and modify whatever you need for your purposes:
+* <a href="https://github.com/AirGateway/bookingpad-app">https://github.com/AirGateway/bookingpad-app</a></p>
+
+<p>Please feel free to open Pull Requests if you think your improvements can be useful for the tool.</p>
+
+<hr />
+
+<p><strong>Authenticating agents</strong></p>
+
+<p>In our bookingpad tool, agents can login using their username, agency and password. But sometimes, your needs include your users login only on your own app (which uses our JSON API) and you want them to use bookingpad only for something that your own app doesn&rsquo;t support (check <a href="https://dev-guides.airgateway.net/hub_api_docs">https://dev-guides.airgateway.net/hub_api_docs</a> to know how to create agents in your organization, you&rsquo;ll need to store all the agents information in your app).</p>
+
+<p>You can use our own bookingpad or a different instance you have in your servers, in this case we&rsquo;ll use our own bookingpad instance domain.</p>
+
+<p>You can achieve this by using following process:
+* Obtain access token for the user you want to auto-authenticate
+    1. Call <a href="https://app.airgateway.net/api/login">https://app.airgateway.net/api/login</a>
+    2. Send username, agencyID and password of the user you want to get the access token as data-binary
+    3. Example: <code>curl 'https://app.airgateway.net/api/auth/login' -H 'pragma: no-cache' -H 'origin: https://yourdomain.com' -H 'accept-encoding: gzip, deflate, br' -H 'accept-language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,de;q=0.6,it;q=0.5' -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' -H 'content-type: application/json;charset=UTF-8' -H 'accept: application/json, text/plain, */*' -H 'cache-control: no-cache' -H 'authority: backoffice.airgateway.net' -H 'referer: https://yourdomain.com' --data-binary '{&quot;username&quot;:&quot;agent&quot;, &quot;agencyID&quot;:&quot;agency&quot;, &quot;password&quot;:&quot;XXXXXXX&quot;}' --compressed</code>
+    4. In order to make this work, please let us know the domain you&rsquo;ll call us from
+* You&rsquo;ll receive an access token in the response which you&rsquo;ll have to add to the url you&rsquo;ll redirect your user to:
+    - <a href="https://app.airgateway.net/login?access_token=XXXXXXXXXXXXXX">https://app.airgateway.net/login?access_token=XXXXXXXXXXXXXX</a>
+* If you want to send your users to our bookingpad one they have finished creating an order, so they can add ancillaries or seats, you can use &ldquo;redirect_url&rdquo; so once they are auto-logged they will be redirected to the page with the order they created:
+    - <a href="https://app.airgateway.net/login?access_token=XXXXXXXXXXXXXX&amp;redirect_url=https://backoffice.airgateway.net/orders/LH/AGW-XXXXXXX">https://app.airgateway.net/login?access_token=XXXXXXXXXXXXXX&amp;redirect_url=https://backoffice.airgateway.net/orders/LH/AGW-XXXXXXX</a></p>
 
 
 <footer class=" footline" >
@@ -545,26 +566,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
                 
                 
 
@@ -597,6 +598,26 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
                 
                 
 
@@ -615,10 +636,10 @@
 
 
         
-            <a class="nav nav-prev" href="/getting_started/single-provider_requests/" title="Single Provider Requests"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/hub_api_docs/" title="Hub API Docs"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/hub_api_docs/" title="Hub API Docs" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/providers/" title="Providers List" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
