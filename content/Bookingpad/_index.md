@@ -5,7 +5,7 @@ weight: 4
 
 As part of our services, we have implemented a frontend-only angular application which uses our NDC JSON API.
 
-You can use this tool directly as an example to see the examples on how to use our API, using your credentials, here:
+You can use this tool directly as an example to see the examples on how to use our API, using your credentials (agent username, agency and password), here:
 * https://app.airgateway.net/
 
 This tool is open source so you can use it the way you prefer or even fork it and modify whatever you need for your purposes:
