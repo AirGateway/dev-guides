@@ -51,6 +51,7 @@ In some orders, you might be interested in adding new services like seats, ancil
 ----
 
 ***OrderRetrieve***
+
 You can see [the docs](https://api.airgateway.net/v1.1/swagger-ui/#!/NDC_Methods/OrderRetrieve_Post) of this method.
 
 This method receives the ID of the order you want to retrieve and returns all the information attached to that order.
@@ -62,6 +63,7 @@ You'll receive all order details, everything we receive from the airline and som
 ----
 
 ***OrderReshop***
+
 You can see [the docs](https://api.airgateway.net/v1.1/swagger-ui/#!/NDC_Methods/OrderReshop_Post) of this method.
 
 This method receives the ID of the order you want to retrieve some more info like "when" do you want to flight instead.
@@ -71,6 +73,7 @@ The response will include all the offers that match that new search, it's a kind
 ----
 
 ***OrderReshopReprice***
+
 You can see [the docs](https://api.airgateway.net/v1.1/swagger-ui/#!/NDC_Methods/OrderReshopReprice_Post) of this method.
 
 It's more or less like OrderPrice in Reshop. You'll receive details about an offer to change your current order.
@@ -89,6 +92,7 @@ You'll receive a response with the Order details like after OrderCreate.
 
 
 ***SeatAvailability***
+
 [This method](https://api.airgateway.net/v1.1/swagger-ui/#!/NDC_Methods/SeatAvailability_Post) allows you to request available seats in a given offer. When it's done before you book the order (pre-booking) you'll have to add the payment method (and pay) in OrderCreate to succeed (for example with Iberia).
 
 Sometimes even airlines which accept this method will return an error with some offers (not all flights and fares accept seat selection).
@@ -96,6 +100,7 @@ Sometimes even airlines which accept this method will return an error with some 
 ----
 
 ***ServiceList***
+
 You can see [the docs](https://api.airgateway.net/v1.1/swagger-ui/#!/NDC_Methods/ServiceList_Post) of this method.
 
 This service receives information about the passengers so the airlines can know what Services are available depending on the type of passenger (age) and returns a list of services with description, prices, taxes...
