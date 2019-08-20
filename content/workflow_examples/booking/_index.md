@@ -15,8 +15,7 @@ This is the basic workflow you need to run to buy tickets from any airline.
 1. AirShopping
 2. OfferPrice
 3. OrderCreate (without Form of Payment)
-4. OrderRetrieve
-5. AirDocIssue
+4. AirDocIssue
 
 ----
 
