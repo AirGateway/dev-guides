@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Home :: AirGateway NDC APIs Development Guide</title>
+    <title>Hub API Docs :: AirGateway NDC APIs Development Guide</title>
 
     
     <link href="/css/nucleus.css?1565279250" rel="stylesheet">
@@ -44,7 +44,7 @@
 
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/hub_api_docs/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -251,8 +251,8 @@
   
     
     <li data-nav-id="/hub_api_docs/" title="Hub API Docs" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/hub_api_docs/">
@@ -343,53 +343,63 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            <a href='/'>Home</a> > Hub API Docs
+          
+        
+          
+        
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
+          
+            <h1>Hub API Docs</h1>
           
 
         
 
 
+<p>We offer an API for provisioning credentials so you can easily create new consumers, agencies and agents in our systems.</p>
 
+<p>You can use this API to manage Agencies, Agents, Consumers and Users in your organizations. You can list our providers, Plans and the APIs we offer, as long as create new tokens for your agents so they can consume our services.</p>
 
-<h1 id="airgateway-ndc-json-api-developer-guide">AirGateway NDC JSON API Developer Guide</h1>
-
-<p>This is a developer guide intended to provide insights on a technical integration with AirGateway&rsquo;s <strong>NDC JSON API</strong> aggregation service.</p>
-
-<p>Our platform is designed to facilitate the interaction with the new distribution model brought by <a href="http://www.iata.org/whatwedo/airline-distribution/ndc/">NDC (New Distribution Capability)</a> established by IATA and adopted by a growing number of the most relevant airlines in the World.</p>
-
-<p>Our <strong>NDC Aggregation Platform</strong> facilitates the interaction with multiple NDC providers in a one-to-one architecture. This makes much easier to interact with distributed airline NDC APIs and therefore facilitates transitioning into this model.</p>
-
-<p>Our <strong>NDC Aggregation Platform</strong> works as a real-time routing machine delivering and collecting concurrently shopping offers from multiple NDC providers (airlines) and deliver an asynchronous real-time aggregation isolating consumers from cases they won&rsquo;t need to consider such as message wrapping (SOAP, REST&hellip;), Authentication issues, API architectural issues, and ancillaries normalization.</p>
-
-<p>Also transitioning among different NDC versions/implementations will be a  much easier process to handle relying on our <strong>NDC Aggregation Platform</strong>.</p>
-
-<h2 id="references-and-links">References and Links</h2>
-
-<p>To use our <strong>NDC JSON API</strong> you must sign up in our agencies portal:</p>
+<p>If you are interested in using this API, please contact us.</p>
 
 <ul>
-<li><a href="https://agency.airgateway.net/">Agencies Portal</a></li>
-</ul>
-
-<p>We use a self-documented API Framework that produces always-up to date Swagger Documentation. This live-documentation can be found here.</p>
-
-<ul>
-<li><a href="https://api.airgateway.net/v1/swagger-ui/">NDC JSON API reference v1.0</a></li>
-<li><a href="https://api.airgateway.net/v1.1/swagger-ui/">NDC JSON API reference v1.1</a></li>
-</ul>
-
-<p>You can find more examples of use in Postman:</p>
-
-<ul>
-<li><a href="https://docs.airgateway.net/">NDC JSON API Postman Documentation</a></li>
-</ul>
-
-<p>For futher questions/comments or just quickly getting in touch with our technical team you are welcome to use our Gitter Support Chat.</p>
-
-<ul>
-<li><a href="https://gitter.im/AirGateway/Lobby">https://gitter.im/AirGateway/Lobby</a></li>
+<li><strong>V1.0</strong> <a href="https://hub.airgateway.net/api/static/swagger-ui/#/">https://hub.airgateway.net/api/static/swagger-ui/#/</a></li>
 </ul>
 
 
@@ -529,6 +539,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -545,6 +556,9 @@
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -563,8 +577,10 @@
 
 
         
+            <a class="nav nav-prev" href="/ndc_json_api_docs/" title="NDC JSON APIs Docs"> <i class="fa fa-chevron-left"></i></a>
         
-            <a class="nav nav-next" href="/getting_started/" title="Getting Started" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        
+            <a class="nav nav-next" href="/providers/" title="Providers List" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
