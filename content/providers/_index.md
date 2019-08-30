@@ -23,6 +23,7 @@ This is a table of our Providers (Airlines) content displaying their capabilitie
 | **WS**        | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: | - | BSP, :credit_card: | 
 | **SQ**        | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: | - | BSP, :credit_card: | 
 | **AY**        | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: | - | BSP, :credit_card: | 
+| **SK**        | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: | - | BSP, :credit_card: | 
 | **EY**        | :soon: | :soon: | :soon: | :soon: | :soon: |  | :soon: | 
 | **SV**        | :soon: | :soon: | :soon: | :soon: | :soon: |  | :soon: | 
 | **WY**        | :soon: | :soon: | :soon: | :soon: | :soon: |  | :soon: | 
