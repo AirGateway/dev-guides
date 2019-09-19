@@ -3,13 +3,10 @@ title: Webhooks
 weight: 5
 pre: ' '
 ---
-
-Webhooks
-==================
-
 We offer some event based services like mails or slack notifications after orders are created, changes in orders or orders are canceled. We can personalize some of these services if needed, but we offer a really versatile service you can use to be notified on every event you want to track: **webhooks**.
 
 We currently track these events:
+
 * OrderCreated
 * OrderChanged
 * OrderCanceled
@@ -39,4 +36,5 @@ Everytime the selected events are triggered, we'll call your endpoint with a JSO
             "freeText": "Order has been ticketed, you can print tickets now: {{Order ID or link in bookingpad}}"
         }
     }
-}
+}``
+```
