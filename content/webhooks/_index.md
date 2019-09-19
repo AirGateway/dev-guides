@@ -23,7 +23,8 @@ For each of these events, we can call any endpoint you want (we can use the same
 
 Everytime the selected events are triggered, we'll call your endpoint with a JSON body including the information you need. For example we can configure a task to call your endpoints on OrderTcketed with this information:
 
-```{
+```
+{
     "http_request": {
         "url": "https://yourservices/api/order-ticketed",
         "header": {
@@ -36,5 +37,5 @@ Everytime the selected events are triggered, we'll call your endpoint with a JSO
             "freeText": "Order has been ticketed, you can print tickets now: {{Order ID or link in bookingpad}}"
         }
     }
-}``
+}
 ```
