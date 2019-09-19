@@ -8,9 +8,9 @@ public_folder: "/images" # The src attribute for uploaded media will begin with 
 
 # Collections
 collections: # A list of collections the CMS should be able to edit
-  - name: "Basic"
-    label: "Basic"
-    folder: "content/basic"
+  - name: "Getting Started"
+    label: "Getting Started"
+    folder: "content/getting_started"
     create: false
     slug: "_index"
     fields:
@@ -19,28 +19,8 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Menu pre-text", name: "pre", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "Authentication"
-    label: "Basic / Authentication"
-    folder: "content/basic/authentication"
-    create: false
-    slug: "_index"
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Weight", name: "weight", widget: "number"}
-      - {label: "Menu pre-text", name: "pre", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
-  - name: "Messages Available"
-    label: "Basic / Messages Available"
-    folder: "content/basic/messages_available"
-    create: false
-    slug: "_index"
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Weight", name: "weight", widget: "number"}
-      - {label: "Menu pre-text", name: "pre", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
-  - name: "MPR"
-    label: "Basic / MPR"
-    folder: "content/basic/multi-provider_requests"
+    label: "Getting Started / Authentication"
+    folder: "content/getting_started/authentication"
     create: false
     slug: "_index"
     fields:
@@ -49,8 +29,8 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Menu pre-text", name: "pre", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "Sending Requests"
-    label: "Basic / Sending Requests"
-    folder: "content/basic/sending_requests_to_our_NDC_Gateway"
+    label: "getting_started / Sending Requests"
+    folder: "content/getting_started/sending_requests_to_our_ndc_api"
     create: false
     slug: "_index"
     fields:
@@ -58,9 +38,9 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Weight", name: "weight", widget: "number"}
       - {label: "Menu pre-text", name: "pre", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
-  - name: "SPR"
-    label: "Basic / SPR"
-    folder: "content/basic/single-provider_requests"
+  - name: "Multi-provider requests"
+    label: "getting_started / Multi-provider requests"
+    folder: "content/getting_started/multi-provider_requests"
     create: false
     slug: "_index"
     fields:
@@ -68,9 +48,9 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Weight", name: "weight", widget: "number"}
       - {label: "Menu pre-text", name: "pre", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
-  - name: "Swagger docs list"
-    label: "Basic / Swagger docs list"
-    folder: "content/basic/swagger_docs"
+  - name: "Single provider requests"
+    label: "getting_started / Single Provider Requests"
+    folder: "content/getting_started/single-provider_requests"
     create: false
     slug: "_index"
     fields:
@@ -78,29 +58,82 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Weight", name: "weight", widget: "number"}
       - {label: "Menu pre-text", name: "pre", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "NDC JSON APIs Docs"
+    label: "NDC JSON APIS DOCS"
+    folder: "content/NDC_JSON_API_Docs"
+    create: false
+    slug: "_index"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Weight", name: "weight", widget: "number"}
+      - {label: "Menu pre-text", name: "pre", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "Hub API Docs"
+    label: "Hub API Docs"
+    folder: "content/Hub_API_Docs"
+    create: false
+    slug: "_index"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Weight", name: "weight", widget: "number"}
+      - {label: "Menu pre-text", name: "pre", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "Consumers"
+    label: "Getting Started / Consumers"
+    folder: "content/Hub_API_Docs/consumers"
+    create: false
+    slug: "_index"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Weight", name: "weight", widget: "number"}
+      - {label: "Menu pre-text", name: "pre", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "Agencies"
+    label: "Hub_API_Docs / Agencies"
+    folder: "content/Hub_API_Docs/agencies"
+    create: false
+    slug: "_index"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Weight", name: "weight", widget: "number"}
+      - {label: "Menu pre-text", name: "pre", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "Agents"
+    label: "Hub_API_Docs / Agents"
+    folder: "content/Hub_API_Docs/agents"
+    create: false
+    slug: "_index"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Weight", name: "weight", widget: "number"}
+      - {label: "Menu pre-text", name: "pre", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "Keys"
+    label: "Hub_API_Docs / Keys"
+    folder: "content/Hub_API_Docs/keys"
+    create: false
+    slug: "_index"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Weight", name: "weight", widget: "number"}
+      - {label: "Menu pre-text", name: "pre", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "Workflow Examples"
+    label: "Workflow Examples"
+    folder: "content/workflow_examples"
+    create: false
+    slug: "_index"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Weight", name: "weight", widget: "number"}
+      - {label: "Menu pre-text", name: "pre", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  
+  
   - name: "Providers"
-    label: "Providers"
+    label: "Providers List"
     folder: "content/providers"
-    create: false
-    slug: "_index"
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Weight", name: "weight", widget: "number"}
-      - {label: "Menu pre-text", name: "pre", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
-  - name: "Cabin Preferences"
-    label: "Providers / Cabin Preferences"
-    folder: "content/providers/cabin_preferences"
-    create: false
-    slug: "_index"
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Weight", name: "weight", widget: "number"}
-      - {label: "Menu pre-text", name: "pre", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
-  - name: "Fare Preferences"
-    label: "Providers / Fare Preferences"
-    folder: "content/providers/fare_preferences"
     create: false
     slug: "_index"
     fields:
