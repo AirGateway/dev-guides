@@ -29,7 +29,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Menu pre-text", name: "pre", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "Sending Requests"
-    label: "getting_started / Sending Requests"
+    label: "Getting Started / Sending Requests"
     folder: "content/getting_started/sending_requests_to_our_ndc_api"
     create: false
     slug: "_index"
@@ -39,7 +39,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Menu pre-text", name: "pre", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "Multi-provider requests"
-    label: "getting_started / Multi-provider requests"
+    label: "Getting Started / Multi-provider requests"
     folder: "content/getting_started/multi-provider_requests"
     create: false
     slug: "_index"
@@ -49,7 +49,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Menu pre-text", name: "pre", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "Single provider requests"
-    label: "getting_started / Single Provider Requests"
+    label: "Getting Started / Single Provider Requests"
     folder: "content/getting_started/single-provider_requests"
     create: false
     slug: "_index"
@@ -79,7 +79,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Menu pre-text", name: "pre", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "Consumers"
-    label: "Getting Started / Consumers"
+    label: "Hub API Docs / Consumers"
     folder: "content/Hub_API_Docs/consumers"
     create: false
     slug: "_index"
@@ -118,6 +118,16 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Weight", name: "weight", widget: "number"}
       - {label: "Menu pre-text", name: "pre", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "Webhooks"
+    label: "Webhooks"
+    folder: "content/webhooks"
+    create: false
+    slug: "_index"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Weight", name: "weight", widget: "number"}
+      - {label: "Menu pre-text", name: "pre", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
   - name: "Workflow Examples"
     label: "Workflow Examples"
     folder: "content/workflow_examples"
@@ -128,9 +138,26 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Weight", name: "weight", widget: "number"}
       - {label: "Menu pre-text", name: "pre", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
-
-  
-  
+  - name: "Booking"
+    label: "Workflow Examples / Booking"
+    folder: "content/workflow_examples/booking"
+    create: false
+    slug: "_index"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Weight", name: "weight", widget: "number"}
+      - {label: "Menu pre-text", name: "pre", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "Servicing"
+    label: "Workflow Examples / Servicing"
+    folder: "content/workflow_examples/servicing"
+    create: false
+    slug: "_index"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Weight", name: "weight", widget: "number"}
+      - {label: "Menu pre-text", name: "pre", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
   - name: "Providers"
     label: "Providers List"
     folder: "content/providers"
