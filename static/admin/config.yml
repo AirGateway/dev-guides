@@ -130,7 +130,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "Workflow Examples"
     label: "Workflow Examples"
-    folder: "content/workflow_examples"
+    folder: "content/workflows"
     create: false
     slug: "_index"
     fields:
@@ -140,7 +140,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "Booking"
     label: "Workflow Examples / Booking"
-    folder: "content/workflow_examples/booking"
+    folder: "content/workflows/booking"
     create: false
     slug: "_index"
     fields:
@@ -150,7 +150,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "Servicing"
     label: "Workflow Examples / Servicing"
-    folder: "content/workflow_examples/servicing"
+    folder: "content/workflows/servicing"
     create: false
     slug: "_index"
     fields:
