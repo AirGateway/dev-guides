@@ -128,8 +128,8 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Weight", name: "weight", widget: "number"}
       - {label: "Menu pre-text", name: "pre", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
-  - name: "Workflow Examples"
-    label: "Workflow Examples"
+  - name: "Workflows"
+    label: "Workflows"
     folder: "content/workflows"
     create: false
     slug: "_index"
@@ -139,7 +139,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Menu pre-text", name: "pre", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "Booking"
-    label: "Workflow Examples / Booking"
+    label: "Workflows / Booking"
     folder: "content/workflows/booking"
     create: false
     slug: "_index"
@@ -149,7 +149,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Menu pre-text", name: "pre", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "Servicing"
-    label: "Workflow Examples / Servicing"
+    label: "Workflows / Servicing"
     folder: "content/workflows/servicing"
     create: false
     slug: "_index"
