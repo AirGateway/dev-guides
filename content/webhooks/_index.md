@@ -23,47 +23,47 @@ For each of these events, we can call any endpoint you want (we can use the same
 
 Everytime the selected events are triggered, we'll call your endpoint with a JSON body including the information you need. This is **completely configurable**, we can adapt it to your needs, using any of these fields:
 
-* **agw_id**: Order id in our platform
-* **order_id**: Order id from airline
+* **agwId**: Order id in our platform
+* **orderId**: Order id from airline
 * **pnr**
-* **record_locator**
-* **booking_type**: One Way, Round Trip or Multicity
+* **recordLocator**
+* **bookingType**: One Way, Round Trip or Multicity
 * **origin**
 * **destination**
-* **full_path**: All legs in the order (MAD-LHR, LHR-MAD...)
-* **adults_pax**: number of adults
-* **children_pax**: number of children
-* **infants_pax**: number of infants
-* **order_status**: cancelled, on hold...
-* **total_amount**
-* **created_on**
-* **updated_on**
-* **session_id**
-* **agent_email**: email from the agent that triggered the event
-* **consumer_email**: email from the consumer in the order
-* **psg_phone**: contact passenger phone
-* **psg_email**: contact passenger email
-* **consumer_iata_code**
-* **consumer_country_code**
+* **fullPath**: All legs in the order (MAD-LHR, LHR-MAD...)
+* **adultsPax**: number of adults
+* **childrenPax**: number of children
+* **infantsPax**: number of infants
+* **orderStatus**: cancelled, on hold...
+* **totalAmount**
+* **createdOn**
+* **updatedOn**
+* **sessionId**
+* **agentEmail**: email from the agent that triggered the event
+* **consumerEmail**: email from the consumer in the order
+* **psgPhone**: contact passenger phone
+* **psgEmail**: contact passenger email
+* **consumerIataCode**
+* **consumerCountryCode**
 * **consumer**: consumer name
 * **provider**: provider code
 * **agent**: agent name
 * **agency**: agency name
 
-For example we can configure a task to call your endpoints on OrderTcketed with this information:
+For example we can configure a task to call your endpoints on OrderTicketed with this information:
 
 ```
 {
-    "http_request": {
+    "httpRequest": {
         "url": "https://yourservices/api/order-ticketed",
         "header": {
-            "Authorization": "Basic YourPassword"
+            "authorization": "Basic YourPassword"
         },
-        "json_body": {
+        "jsonBody": {
             "agent": "{{agent}}",
             "agency": "{{agency}}",
             "pnr": "{{pnr}}",
-            "freeText": "Order has been ticketed, this is your order ID: {{agw_id}}"
+            "freeText": "Order has been ticketed, this is your order ID: {{agwId}}"
         }
     }
 }
