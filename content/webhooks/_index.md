@@ -60,6 +60,7 @@ For example we can configure a task to call your endpoints on OrderTicketed with
             "authorization": "Basic YourPassword"
         },
         "jsonBody": {
+            "orderID": "{{agwId}}",
             "agent": "{{agent}}",
             "agency": "{{agency}}",
             "pnr": "{{pnr}}",
