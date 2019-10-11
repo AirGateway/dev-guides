@@ -23,8 +23,8 @@ For each of these events, we can call any endpoint you want (we can use the same
 
 Everytime the selected events are triggered, we'll call your endpoint with a JSON body including the information you need. This is **completely configurable**, we can adapt it to your needs, using any of these fields:
 
-* **agwId**: Order id in our platform
-* **orderId**: Order id from airline
+* **agwID**: Order id in our platform
+* **orderID**: Order id from airline
 * **pnr**
 * **recordLocator**
 * **bookingType**: One Way, Round Trip or Multicity
@@ -60,11 +60,11 @@ For example we can configure a task to call your endpoints on OrderTicketed with
             "authorization": "Basic YourPassword"
         },
         "jsonBody": {
-            "orderID": "{{agwId}}",
+            "orderID": "{{agwID}}",
             "agent": "{{agent}}",
             "agency": "{{agency}}",
             "pnr": "{{pnr}}",
-            "freeText": "Order has been ticketed, this is your order ID: {{agwId}}"
+            "freeText": "Order has been ticketed, this is your order ID: {{agwID}}"
         }
     }
 }
