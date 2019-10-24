@@ -17,13 +17,13 @@ This is a table of our Providers (Airlines) content displaying their capabilitie
 | **AA**        | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | - | :seat: | :date: | - |  BSP, :credit_card: | 
 | **UA**        | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | - | :seat: | :date: | - |  BSP, :credit_card: | 
 | **A3**        | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | - | :seat: :baggage_claim: | :date: | - | BSP, :credit_card: | 
-| **AF**        | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | - | :seat: | - | - | BSP | 
-| **KL**        | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | - | :seat: | - | - | BSP | 
+| **AF**        | :white_check_mark:| :white_check_mark: | :white_check_mark: | :x: | - | :seat: | - | - | BSP | 
+| **KL**        | :white_check_mark:| :white_check_mark: | :white_check_mark: | :x: | - | :seat: | - | - | BSP | 
 | **EK**        | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | - | :seat: :baggage_claim: | - | - | BSP | 
 | **WS**        | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | - | :seat: | - | - | BSP, :credit_card: | 
 | **SQ**        | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | - | :seat: | - | - | BSP, :credit_card: | 
 | **AY**        | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | - | :seat: | - | - | BSP, :credit_card: | 
-| **SK**        | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | - | :seat: | - | - | BSP, :credit_card: | 
+| **SK**        | :soon:| :soon: | :soon: | :soon: | - | :seat: | - | - | BSP, :credit_card: | 
 | **EY**        | :soon: | :soon: | :soon: | :soon: | - | - | - | - | 
 | **SV**        | :soon: | :soon: | :soon: | :soon: | - | - | - | - | 
 | **WY**        | :soon: | :soon: | :soon: | :soon: | - | - | - | - | 
@@ -36,4 +36,10 @@ This is a table of our Providers (Airlines) content displaying their capabilitie
 
 ### Icons Legend
 
-:seat: Seat selection |  :baggage_claim: Extra Baggage | :date: Change flight dates | :credit_card: Credit card payment | :soon: Under development
+- :white_check_mark: Supported feature
+- :seat: Seat selection
+- :baggage_claim: Extra Baggage
+- :date: Change flight dates
+- :credit_card: Credit card payment
+- :soon: Under development
+- :x: Not available
