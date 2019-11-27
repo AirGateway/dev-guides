@@ -1,17 +1,17 @@
 ---
-title: "Authentication"
+title: Authentication
 weight: 1
-pre: "1 . "
+pre: '1 . '
 ---
-
 To be able to access our platform you will have to get the proper credentials at our [Agencies Portal](https://agency.airgateway.net/). After registration, you would be able to apply for an Authentication key [here](https://dev.airgateway.net/apis/).
 
-----
+- - -
+
 All requests sent to the **NDC Aggregation Platform**  are required to be consumer-authenticated with a two HTTP headers pair:
 
-- **Authorization**: {Authorization-key} (obtained from our Dev Portal)
-- **AG-Consumer**:  {Consumer-ID}  (a three chars. code)
-----------
+* **Authorization**: {Authorization-key} (obtained from our Dev Portal)
+
+- - -
 
 Note regarding Authentication:
 
