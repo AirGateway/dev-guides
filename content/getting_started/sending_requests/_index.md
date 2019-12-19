@@ -8,7 +8,7 @@ We use **HTTP/1.1** as communication protocol to accept requests to the gateway.
 
 The public endpoint to our **NDC Gateway** remains immutable for all NDC requests and it is:
 
-* **Version 1**: https://proxy.airgateway.net/v1/
+* **Version 1**: (deprecated)
 * **Version 1.1**: https://proxy.airgateway.net/v1.1/
 
 We require some mandatory basic HTTP headers intended for message formatting:
