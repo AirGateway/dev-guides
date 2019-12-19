@@ -1,5 +1,5 @@
 ---
-title: NDC JSON APIs Docs
+title: NDC APIs Docs
 weight: 2
 pre: ' '
 ---
