@@ -6,17 +6,13 @@ pre: "1 . "
 pre: '1 . '
 ---
 
-To be able to access our platform you will have to get the proper credentials at our [Agencies Portal](https://agency.airgateway.net/). After registration, you would be able to apply for an Authentication key [here](https://dev.airgateway.net/apis/).
+To be able to access our platform you will have to get a validated credentials on our [Sandbox Agency Portal](https://agency.airgateway.net/).
+
+After registration, you would be able to apply for an Authentication key. We will review your application details asap and come back to you.
 
 ----
-All requests sent to the **NDC Aggregation Platform**  are required to be consumer-authenticated with a two HTTP headers pair:
+All requests sent to the **NDC JSON API ** require to be authenticated with an HTTP header like this:
 
-- **Authorization**: {Authorization-key} (obtained from our Dev Portal)
-- **AG-Consumer**:  {Consumer-ID}  (a three chars. code)
-----------
+- **Authorization**: {Authorization-key} 
 
-Note regarding Authentication:
-
-> We will provide further details on how NDC Participant authentication
-> (IATA number, Agency ID in NDC messages Party block) must be provided
-> since this could be related to final production stage.
+An Authorization-key can be obtained on our Agency Portal
