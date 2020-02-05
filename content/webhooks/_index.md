@@ -14,9 +14,9 @@ We currently track these events:
 * OrderStarted (Time of first flight has passed)
 * OrderCompleted (Time of last flight has passed)
 * ServicesAddition
-* ServicesDeletion
+* ServicesRemoval
 * SeatsAddition
-* SeatsDeletion
+* SeatsRemoval
 * DatesChanged
 
 For each of these events, we can call any endpoint you want (we can use the same for all events or we can call a different one for each).
