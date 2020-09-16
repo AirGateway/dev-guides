@@ -23,7 +23,6 @@ This is a table of our Providers (Airlines) content displaying their capabilitie
 | **SQ**        | :white_check_mark: | :white_check_mark: | :white_check_mark: | \- | :seat: | \- | \- | :globe_with_meridians: | :moneybag: :credit_card: | 
 | **AY**        | :white_check_mark: | :white_check_mark: | :white_check_mark: | \- | :seat: | \- | \- | :globe_with_meridians: | :moneybag: :credit_card: | 
 | **VY**        | :white_check_mark: | :white_check_mark: | :white_check_mark: | \- | :seat: | \- | \- | :globe_with_meridians: | :moneybag: :credit_card: | 
-| **HR**        | :white_check_mark: | \- | \- | \- | \- | \- | \- | :globe_with_meridians: | :moneybag: :credit_card: | 
 | **QF**        | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
 | **EY**        | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
 -------------
@@ -31,6 +30,7 @@ This is a table of our Providers (Airlines) content displaying their capabilitie
 | Other Providers | Shopping & Booking | On-Hold & Issuing | Cancel & Refund | Pre-Sale Services | Post-Sale Services | Changes | FQTV Card | Fare Types | FoP |
 | --------------- |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 | [**TripStack**](https://www.tripstack.com/products/lcc/)   | :white_check_mark: | - | - | :soon: | - | - | - | :globe_with_meridians: | :credit_card: |
+| [**Hahn Air**](https://www.hahnair.com/en)   | :white_check_mark: | :soon: | :soon: | :soon: | - | - | - | :globe_with_meridians: | :moneybag: :credit_card: |
 -------------
 
 ### Icons
