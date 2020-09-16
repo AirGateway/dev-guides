@@ -5,7 +5,7 @@ pre: ' '
 ---
 This is a table of our Providers (Airlines) content displaying their capabilities supported through our aggregation platform.
 
-| Provider      | Shopping & Booking | On-Hold & Issuing | Cancel & Refund | Pre-Sale Services | Post-Sale Services | Changes | FQTV Card | Fare Types | FoP |
+| NDC Airlines  | Shopping & Booking | On-Hold & Issuing | Cancel & Refund | Pre-Sale Services | Post-Sale Services | Changes | FQTV Card | Fare Types | FoP |
 | ------------- |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 | **BA**        | :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | :seat: :baggage_claim: :fork_and_knife: | :date: | :white_check_mark: | :globe_with_meridians: :closed_lock_with_key: :chart_with_upwards_trend: | :moneybag: :credit_card: | 
 | **IB**        | :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | :seat: :baggage_claim: | :date: | :white_check_mark: | :globe_with_meridians: :closed_lock_with_key: :chart_with_upwards_trend: | :moneybag: :credit_card: | 
@@ -26,7 +26,11 @@ This is a table of our Providers (Airlines) content displaying their capabilitie
 | **HR**        | :white_check_mark: | \- | \- | \- | \- | \- | \- | :globe_with_meridians: | :moneybag: :credit_card: | 
 | **QF**        | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
 | **EY**        | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
+-------------
 
+| Other Providers | Shopping & Booking | On-Hold & Issuing | Cancel & Refund | Pre-Sale Services | Post-Sale Services | Changes | FQTV Card | Fare Types | FoP |
+| --------------- |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| [**TripStack**](https://www.tripstack.com/products/lcc/)   | :white_check_mark: | - | - | :soon: | - | - | - | :globe_with_meridians: | :credit_card: |
 -------------
 
 ### Icons
