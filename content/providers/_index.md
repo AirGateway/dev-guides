@@ -5,10 +5,10 @@ pre: ' '
 ---
 This is a table of our Providers (Airlines) content displaying their capabilities supported through our aggregation platform.
 
-| Provider      | Shopping | Booking | On-Hold Issuing | Cancel & Refund | Pre-Sale Services | Post-Sale Services | Changes | FQTV Card | Fares | FoP |
+| Provider      | Shopping | Booking | On-Hold Issuing | Cancel & Refund | Pre-Sale Services | Post-Sale Services | Changes | FQTV Card | Fare Types | FoP |
 | ------------- |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 | **BA**        | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | :seat: :baggage_claim: :fork_and_knife: | :date: | :white_check_mark: | :globe_with_meridians: :closed_lock_with_key: :chart_with_upwards_trend: | :moneybag: :credit_card: | 
-| **IB**        | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | :seat: :baggage_claim: | :date: | :white_check_mark: | :globe_with_meridians: :closed_lock_with_key: :chart_with_upwards_trend: | :moneybag:, :credit_card: | 
+| **IB**        | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | :seat: :baggage_claim: | :date: | :white_check_mark: | :globe_with_meridians: :closed_lock_with_key: :chart_with_upwards_trend: | :moneybag: :credit_card: | 
 | **LH**        | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | :seat: :baggage_claim: | :date: | \- | :globe_with_meridians: :closed_lock_with_key: :chart_with_upwards_trend: | :moneybag: :credit_card: | 
 | **LX**        | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | :seat: :baggage_claim: | :date: | \- | :globe_with_meridians: :closed_lock_with_key: :chart_with_upwards_trend: | :moneybag: :credit_card: | 
 | **OS**        | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | :seat: :baggage_claim: | :date: | \- | :globe_with_meridians: :closed_lock_with_key: :chart_with_upwards_trend: | :moneybag: :credit_card: | 
