@@ -179,7 +179,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
 }
 #sidebar a {
     color: #ECECEC;
-    font-weight: bold;
+    font-weight: 400;
 }
 #sidebar a:hover {
     color: #e6e6e6;
