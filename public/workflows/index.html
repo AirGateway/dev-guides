@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Hub API Docs :: AirGateway NDC APIs Development Guide</title>
+    <title>Workflows :: AirGateway NDC APIs Development Guide</title>
 
     
     <link href="/css/nucleus.css?1613069331" rel="stylesheet">
@@ -44,7 +44,7 @@
 
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
-  <body class="" data-url="/hub_api_docs/">
+  <body class="" data-url="/workflows/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -251,8 +251,8 @@
   
     
     <li data-nav-id="/hub_api_docs/" title="Hub API Docs" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/hub_api_docs/">
@@ -415,8 +415,8 @@
   
     
     <li data-nav-id="/workflows/" title="Workflows" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/workflows/">
@@ -582,6 +582,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
                   <span class="links">
                     
           
@@ -590,7 +592,7 @@
             
           
           
-            <a href='/'>Home</a> > Hub API Docs
+            <a href='/'>Home</a> > Workflows
           
         
           
@@ -598,35 +600,101 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents"></nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
 
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>Workflows</h1>
           
 
         
 
 
-<h1 id="hub-api-docs">Hub API Docs</h1>
-<p>We offer an API for provisioning credentials so you can easily create new consumers, agencies and agents in our systems.</p>
-<p>You can use this API to manage Agencies, Agents, Consumers and Users in your organizations. You can list our providers, Plans and the APIs we offer, as long as create new tokens for your agents so they can consume our services.</p>
-<p>If you are interested in using this API, please contact us.</p>
+<p><strong>Introduction</strong></p>
+<p>You can use our NDC JSON API to search tickets, create orders, issue tickets, add services&hellip;</p>
+<p>Using our NDC JSON API, you can book and issue tickets, and adding ancillaries to these bookings too.</p>
+<p>You can find our basic workflows here:</p>
 <ul>
-<li><strong>V1.0</strong> <a href="https://hub.airgateway.net/api/static/swagger-ui/#/">https://hub.airgateway.net/api/static/swagger-ui/#/</a></li>
+<li><a href="https://dev-guides.airgateway.net/workflows/booking/">Booking</a></li>
+<li><a href="https://dev-guides.airgateway.net/workflows/servicing/">Servicing</a></li>
 </ul>
-<p>You can see a workflow example in this chapter</p>
+<hr>
+<p><strong>Methods</strong></p>
+<p>You can find our NDC JSON API docs <a href="https://api.airgateway.net/v1.1/swagger-ui/">here</a>.</p>
+<p>Anyway, below you have a little description on what these methods are used for.</p>
+<hr>
+<p><em><strong>AirShopping</strong></em></p>
+<p>You can see <a href="https://api.airgateway.net/v1.1/swagger-ui/#!/NDC_Methods/AirDocIssue_Post">the docs</a> and <a href="https://docs.airgateway.net/?version=latest#2e6c3925-7fc9-4675-a633-4e218762e98d">an example</a> on how to use this method.</p>
+<p>This method receives a &ldquo;search&rdquo; with the flights info you want to search (origin, destination, dates&hellip;) and you&rsquo;ll receive a list of offers of each of the airlines you send the request to (you can indicate this via headers as <a href="https://dev-guides.airgateway.net/getting_started/sending_requests_to_our_ndc_api/">explained here</a>).</p>
+<hr>
+<p><em><strong>OfferPrice</strong></em></p>
+<p>You can see <a href="https://api.airgateway.net/v1.1/swagger-ui/#!/NDC_Methods/OfferPrice_Post">the docs</a> and <a href="https://docs.airgateway.net/?version=latest#e6a12080-535a-4083-81d3-ece0841aeffd">an example</a> on how to use this method.</p>
+<p>This method receives the id of an offer you want to see detailed (you&rsquo;ll get a list of offer ids in AirShopping) and will return the information the airline gives us for that given offer. Please have in mind that details can be different from an airline to another (some airlines send really exhaustive disclosures while others only send some raw texts, for example). Some airlines don&rsquo;t even implement this method so we&rsquo;ll return the information we have for that offer from AirShopping.</p>
+<hr>
+<p><em><strong>OrderCreate</strong></em></p>
+<p>You can see <a href="https://api.airgateway.net/v1.1/swagger-ui/#!/NDC_Methods/OrderCreate_Post">the docs</a> and <a href="https://docs.airgateway.net/?version=latest#57433cd3-b160-4a35-8e7a-a465c8d5b96e">an example</a> on how to use this method.</p>
+<p>This method receives the information about the offer you want to buy and information essential to create the order (passengers info).</p>
+<p>You can send payment information here too, but it&rsquo;s not recommended for most of the airlines and usecases. If you send payment information, some airlines will try to auto-issue the tickets immediately, which can lead to errors sometimes (if you have infants in your order, for example, you&rsquo;ll have to wait for confirmation from the airline first).</p>
+<p>Sometimes it&rsquo;s needed to add the form of payment because airline doesn&rsquo;t allow order reservation for that offer. For example with Iberia you need to pay when you want to buy tickets for a flight departing today. In vueling paying when creating the order is the default option.</p>
+<hr>
+<p><em><strong>OrderRetrieve</strong></em></p>
+<p>You can see <a href="https://api.airgateway.net/v1.1/swagger-ui/#!/NDC_Methods/OrderRetrieve_Post">the docs</a> of this method.</p>
+<p>This method receives the ID of the order you want to retrieve and returns all the information attached to that order.</p>
+<p>You&rsquo;ll need to call this method if you want to check the status before you go ahead with AirDocIssue, for example.</p>
+<p>You&rsquo;ll receive all order details, everything we receive from the airline and some information we store in our databases like disclosures received in the OfferPrice or remarks and comments your agents can add.</p>
+<hr>
+<p><em><strong>AirDocIssue</strong></em></p>
+<p>You can see <a href="https://api.airgateway.net/v1.1/swagger-ui/#!/NDC_Methods/AirDocIssue_Post">the docs</a> of this method.</p>
+<p>This method will receive the payment method details and the order id you want to pay and get the tickets.</p>
+<p>You&rsquo;ll receive all order details, including tickets information, everything we receive from the airline and some information we store in our databases like disclosures received in the OfferPrice or remarks and comments your agents can add.</p>
+<hr>
+<p><em><strong>SeatAvailability</strong></em></p>
+<p><a href="https://api.airgateway.net/v1.1/swagger-ui/#!/NDC_Methods/SeatAvailability_Post">This method</a> allows you to request available seats in a given offer. When it&rsquo;s done before you book the order (pre-booking) you&rsquo;ll have to add the payment method (and pay) in OrderCreate to succeed (for example with Iberia).</p>
+<p>Sometimes even airlines which accept this method will return an error with some offers (not all flights and fares accept seat selection).</p>
+<hr>
+<p><em><strong>OrderRetrieve</strong></em></p>
+<p>You can see <a href="https://api.airgateway.net/v1.1/swagger-ui/#!/NDC_Methods/OrderRetrieve_Post">the docs</a> of this method.</p>
+<p>This method receives the ID of the order you want to retrieve and returns all the information attached to that order.</p>
+<p>You&rsquo;ll need to call this method if you want to check the status before you go ahead with AirDocIssue, for example.</p>
+<p>You&rsquo;ll receive all order details, everything we receive from the airline and some information we store in our databases like disclosures received in the OfferPrice or remarks and comments your agents can add.</p>
+<hr>
+<p><em><strong>OrderReshop</strong></em></p>
+<p>You can see <a href="https://api.airgateway.net/v1.1/swagger-ui/#!/NDC_Methods/OrderReshop_Post">the docs</a> of this method.</p>
+<p>This method receives the ID of the order you want to retrieve some more info like &ldquo;when&rdquo; do you want to flight instead.</p>
+<p>The response will include all the offers that match that new search, it&rsquo;s a kind of new <em>AirShopping</em>.</p>
+<hr>
+<p><em><strong>OrderReshopReprice</strong></em></p>
+<p>You can see <a href="https://api.airgateway.net/v1.1/swagger-ui/#!/NDC_Methods/OrderReshopReprice_Post">the docs</a> of this method.</p>
+<p>It&rsquo;s more or less like OrderPrice in Reshop. You&rsquo;ll receive details about an offer to change your current order.</p>
+<hr>
+<p><em><strong>OrderChange</strong></em></p>
+<p>You can see <a href="https://api.airgateway.net/v1.1/swagger-ui/#!/NDC_Methods/OrderChange_Post">the docs</a> of this method.</p>
+<p>This method is called to &ldquo;save changes&rdquo; after a change (like OrderReshop, adding seats or services). You&rsquo;ll need to send different information depending on the action you&rsquo;re performing (you&rsquo;ll need to send the ReshopOffferID if you&rsquo;re changing dates but you&rsquo;ll have to send Services if you&rsquo;re adding services, for example), as long as other general data like form of payment and so on.</p>
+<p>You&rsquo;ll receive a response with the Order details like after OrderCreate.</p>
+<hr>
+<p><em><strong>SeatAvailability</strong></em></p>
+<p><a href="https://api.airgateway.net/v1.1/swagger-ui/#!/NDC_Methods/SeatAvailability_Post">This method</a> allows you to request available seats in a given offer. When it&rsquo;s done before you book the order (pre-booking) you&rsquo;ll have to add the payment method (and pay) in OrderCreate to succeed (for example with Iberia).</p>
+<p>Sometimes even airlines which accept this method will return an error with some offers (not all flights and fares accept seat selection).</p>
+<hr>
+<p><em><strong>ServiceList</strong></em></p>
+<p>You can see <a href="https://api.airgateway.net/v1.1/swagger-ui/#!/NDC_Methods/ServiceList_Post">the docs</a> of this method.</p>
+<p>This service receives information about the passengers so the airlines can know what Services are available depending on the type of passenger (age) and returns a list of services with description, prices, taxes&hellip;</p>
 
 
 <footer class=" footline" >
 	
 </footer>
 
-        
-            </div> 
         
         </div>
         
@@ -759,7 +827,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -774,9 +841,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -861,6 +925,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -876,21 +941,8 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
+                        
                     
                 
                 
@@ -899,9 +951,6 @@
                     
                     
 
-                    
-            
-        
                     
             
         
@@ -924,15 +973,34 @@
                     
             
         
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
 
         
 
 
         
-            <a class="nav nav-prev" href="/ndc_json_api_docs/" title="NDC APIs Docs"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/webhooks/" title="Webhooks"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/hub_api_docs/consumers/" title="Consumers" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/workflows/booking/" title="Booking" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

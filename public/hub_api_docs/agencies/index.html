@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Hub API Docs :: AirGateway NDC APIs Development Guide</title>
+    <title>Agencies :: AirGateway NDC APIs Development Guide</title>
 
     
     <link href="/css/nucleus.css?1613069331" rel="stylesheet">
@@ -44,7 +44,7 @@
 
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
-  <body class="" data-url="/hub_api_docs/">
+  <body class="" data-url="/hub_api_docs/agencies/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -252,7 +252,7 @@
     
     <li data-nav-id="/hub_api_docs/" title="Hub API Docs" class="dd-item 
         parent
-        active
+        
         
         ">
       <a href="/hub_api_docs/">
@@ -306,8 +306,8 @@
   
     
     <li data-nav-id="/hub_api_docs/agencies/" title="Agencies" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/hub_api_docs/agencies/">
@@ -582,6 +582,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
                   <span class="links">
                     
           
@@ -590,7 +592,13 @@
             
           
           
-            <a href='/'>Home</a> > Hub API Docs
+            
+            
+          
+          
+            <a href='/'>Home</a> > <a href='/hub_api_docs/'>Hub API Docs</a> > Agencies
+          
+        
           
         
           
@@ -598,35 +606,38 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents"></nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
 
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>Agencies</h1>
           
 
         
 
 
-<h1 id="hub-api-docs">Hub API Docs</h1>
-<p>We offer an API for provisioning credentials so you can easily create new consumers, agencies and agents in our systems.</p>
-<p>You can use this API to manage Agencies, Agents, Consumers and Users in your organizations. You can list our providers, Plans and the APIs we offer, as long as create new tokens for your agents so they can consume our services.</p>
-<p>If you are interested in using this API, please contact us.</p>
-<ul>
-<li><strong>V1.0</strong> <a href="https://hub.airgateway.net/api/static/swagger-ui/#/">https://hub.airgateway.net/api/static/swagger-ui/#/</a></li>
-</ul>
-<p>You can see a workflow example in this chapter</p>
+<p>Each consumer will have at least one agency, but sometimes they have many different agencies (different offices around the same country for example).</p>
+<hr>
+<p><a href="https://hub.airgateway.net/api/static/swagger-ui/#!/Agencies/post_agencies">Agencies</a> are really simple entities which will only have a name and a reference to the consumer they belong.</p>
+<blockquote>
+<p>All these steps can be done via our own hub application which you&rsquo;ll have access to</p>
+</blockquote>
 
 
 <footer class=" footline" >
 	
 </footer>
 
-        
-            </div> 
         
         </div>
         
@@ -794,6 +805,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -804,6 +816,75 @@
                     
             
         
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
                     
                         
             
@@ -856,72 +937,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
 
@@ -929,10 +944,10 @@
 
 
         
-            <a class="nav nav-prev" href="/ndc_json_api_docs/" title="NDC APIs Docs"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/hub_api_docs/consumers/" title="Consumers"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/hub_api_docs/consumers/" title="Consumers" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/hub_api_docs/agents/" title="Agents" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

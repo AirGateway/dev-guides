@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Hub API Docs :: AirGateway NDC APIs Development Guide</title>
+    <title>Webhooks :: AirGateway NDC APIs Development Guide</title>
 
     
     <link href="/css/nucleus.css?1613069331" rel="stylesheet">
@@ -44,7 +44,7 @@
 
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
-  <body class="" data-url="/hub_api_docs/">
+  <body class="" data-url="/webhooks/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -251,8 +251,8 @@
   
     
     <li data-nav-id="/hub_api_docs/" title="Hub API Docs" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/hub_api_docs/">
@@ -391,8 +391,8 @@
   
     
     <li data-nav-id="/webhooks/" title="Webhooks" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/webhooks/">
@@ -582,6 +582,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
                   <span class="links">
                     
           
@@ -590,7 +592,7 @@
             
           
           
-            <a href='/'>Home</a> > Hub API Docs
+            <a href='/'>Home</a> > Webhooks
           
         
           
@@ -598,35 +600,93 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents"></nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
 
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>Webhooks</h1>
           
 
         
 
 
-<h1 id="hub-api-docs">Hub API Docs</h1>
-<p>We offer an API for provisioning credentials so you can easily create new consumers, agencies and agents in our systems.</p>
-<p>You can use this API to manage Agencies, Agents, Consumers and Users in your organizations. You can list our providers, Plans and the APIs we offer, as long as create new tokens for your agents so they can consume our services.</p>
-<p>If you are interested in using this API, please contact us.</p>
+<p>We offer some event based services like mails or slack notifications after orders are created, changes in orders or orders are canceled. We can personalize some of these services if needed, but we offer a really versatile service you can use to be notified on every event you want to track: <strong>webhooks</strong>.</p>
+<p>We currently track these events:</p>
 <ul>
-<li><strong>V1.0</strong> <a href="https://hub.airgateway.net/api/static/swagger-ui/#/">https://hub.airgateway.net/api/static/swagger-ui/#/</a></li>
+<li>OrderCreated</li>
+<li>OrderChanged</li>
+<li>OrderCanceled</li>
+<li>OrderTicketed</li>
+<li>OrderStarted (Time of first flight has passed)</li>
+<li>OrderCompleted (Time of last flight has passed)</li>
+<li>ServicesAddition</li>
+<li>ServicesRemoval</li>
+<li>SeatsAddition</li>
+<li>SeatsRemoval</li>
+<li>DatesChanged</li>
 </ul>
-<p>You can see a workflow example in this chapter</p>
-
+<p>For each of these events, we can call any endpoint you want (we can use the same for all events or we can call a different one for each).</p>
+<p>Everytime the selected events are triggered, we&rsquo;ll call your endpoint with a JSON body including the information you need. This is <strong>completely configurable</strong>, we can adapt it to your needs, using any of these fields:</p>
+<ul>
+<li><strong>agwID</strong>: Order id in our platform</li>
+<li><strong>orderID</strong>: Order id from airline</li>
+<li><strong>pnr</strong></li>
+<li><strong>recordLocator</strong></li>
+<li><strong>bookingType</strong>: One Way, Round Trip or Multicity</li>
+<li><strong>origin</strong></li>
+<li><strong>destination</strong></li>
+<li><strong>fullPath</strong>: All legs in the order (MAD-LHR, LHR-MAD&hellip;)</li>
+<li><strong>adultsPax</strong>: number of adults</li>
+<li><strong>childrenPax</strong>: number of children</li>
+<li><strong>infantsPax</strong>: number of infants</li>
+<li><strong>orderStatus</strong>: cancelled, on hold&hellip;</li>
+<li><strong>totalAmount</strong></li>
+<li><strong>createdOn</strong></li>
+<li><strong>updatedOn</strong></li>
+<li><strong>sessionId</strong></li>
+<li><strong>agentEmail</strong>: email from the agent that triggered the event</li>
+<li><strong>consumerEmail</strong>: email from the consumer in the order</li>
+<li><strong>psgPhone</strong>: contact passenger phone</li>
+<li><strong>psgEmail</strong>: contact passenger email</li>
+<li><strong>consumerIataCode</strong></li>
+<li><strong>consumerCountryCode</strong></li>
+<li><strong>consumer</strong>: consumer name</li>
+<li><strong>provider</strong>: provider code</li>
+<li><strong>agent</strong>: agent name</li>
+<li><strong>agency</strong>: agency name</li>
+</ul>
+<p>For example we can configure a task to call your endpoints on OrderTicketed with this information:</p>
+<pre><code>{
+    &quot;httpRequest&quot;: {
+        &quot;url&quot;: &quot;https://yourservices/api/order-ticketed&quot;,
+        &quot;header&quot;: {
+            &quot;authorization&quot;: &quot;Basic YourPassword&quot;
+        },
+        &quot;jsonBody&quot;: {
+            &quot;orderID&quot;: &quot;{{agwID}}&quot;,
+            &quot;agent&quot;: &quot;{{agent}}&quot;,
+            &quot;agency&quot;: &quot;{{agency}}&quot;,
+            &quot;pnr&quot;: &quot;{{pnr}}&quot;,
+            &quot;freeText&quot;: &quot;Order has been ticketed, this is your order ID: {{agwID}}&quot;
+        }
+    }
+}
+</code></pre>
 
 <footer class=" footline" >
 	
 </footer>
 
-        
-            </div> 
         
         </div>
         
@@ -759,7 +819,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -774,9 +833,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -845,36 +901,6 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -892,16 +918,31 @@
             
                 
                     
+                        
+                        
+                    
                 
                 
 
                     
                     
+                        
+                    
                     
 
                     
+                        
             
-        
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
             
         
@@ -924,15 +965,34 @@
                     
             
         
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
 
         
 
 
         
-            <a class="nav nav-prev" href="/ndc_json_api_docs/" title="NDC APIs Docs"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/hub_api_docs/keys/" title="Keys"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/hub_api_docs/consumers/" title="Consumers" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/workflows/" title="Workflows" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

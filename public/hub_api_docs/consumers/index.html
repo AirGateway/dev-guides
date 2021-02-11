@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Hub API Docs :: AirGateway NDC APIs Development Guide</title>
+    <title>Consumers :: AirGateway NDC APIs Development Guide</title>
 
     
     <link href="/css/nucleus.css?1613069331" rel="stylesheet">
@@ -44,7 +44,7 @@
 
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
-  <body class="" data-url="/hub_api_docs/">
+  <body class="" data-url="/hub_api_docs/consumers/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -252,7 +252,7 @@
     
     <li data-nav-id="/hub_api_docs/" title="Hub API Docs" class="dd-item 
         parent
-        active
+        
         
         ">
       <a href="/hub_api_docs/">
@@ -280,8 +280,8 @@
   
     
     <li data-nav-id="/hub_api_docs/consumers/" title="Consumers" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/hub_api_docs/consumers/">
@@ -582,6 +582,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
                   <span class="links">
                     
           
@@ -590,7 +592,13 @@
             
           
           
-            <a href='/'>Home</a> > Hub API Docs
+            
+            
+          
+          
+            <a href='/'>Home</a> > <a href='/hub_api_docs/'>Hub API Docs</a> > Consumers
+          
+        
           
         
           
@@ -598,35 +606,50 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents"></nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
 
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>Consumers</h1>
           
 
         
 
 
-<h1 id="hub-api-docs">Hub API Docs</h1>
-<p>We offer an API for provisioning credentials so you can easily create new consumers, agencies and agents in our systems.</p>
-<p>You can use this API to manage Agencies, Agents, Consumers and Users in your organizations. You can list our providers, Plans and the APIs we offer, as long as create new tokens for your agents so they can consume our services.</p>
-<p>If you are interested in using this API, please contact us.</p>
+<p>The top level entity in our hub are consumers. Each consumer represents one company which has credentials to use NDC with one or many airlines (providers).</p>
+<hr>
+<p>These <a href="https://hub.airgateway.net/api/static/swagger-ui/#!/Consumers/post_consumers">consumers</a> will have one or many agencies, depending on their size. And each of these agencies will have one or many agents.</p>
+<p>You&rsquo;ll need to setup some information about consumer like:</p>
 <ul>
-<li><strong>V1.0</strong> <a href="https://hub.airgateway.net/api/static/swagger-ui/#/">https://hub.airgateway.net/api/static/swagger-ui/#/</a></li>
+<li>Country code</li>
+<li>City code</li>
+<li>City name</li>
+<li>Currency code</li>
+<li>Contact email</li>
+<li>IATA Number</li>
 </ul>
-<p>You can see a workflow example in this chapter</p>
+<p>Here you can save the default values for payment like BSP.</p>
+<p>A very important part of this step is adding providers to every single consumer they want (each consumer can have agreements with one or many airlines). You can retrieve all the available providers with <a href="https://hub.airgateway.net/api/static/swagger-ui/#!/Providers">providers request</a>.</p>
+<p>Once you have added one or many providers, you can retrieve their <a href="https://hub.airgateway.net/api/static/swagger-ui/#!/Provider_Fields/get_provider_fields">providers fields</a> (each provider needs different credentials, you&rsquo;ll get a list of these fields like &ldquo;key&rdquo; or &ldquo;secret&rdquo; which will be named after the documents airlines will send your consumers).</p>
+<blockquote>
+<p>All these steps can be done via our own hub application which you&rsquo;ll have access to</p>
+</blockquote>
 
 
 <footer class=" footline" >
 	
 </footer>
 
-        
-            </div> 
         
         </div>
         
@@ -775,8 +798,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -794,21 +815,8 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
+                        
                     
                 
                 
@@ -820,56 +828,6 @@
                     
             
         
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
                     
                         
             
@@ -922,6 +880,72 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
 
@@ -929,10 +953,10 @@
 
 
         
-            <a class="nav nav-prev" href="/ndc_json_api_docs/" title="NDC APIs Docs"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/hub_api_docs/" title="Hub API Docs"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/hub_api_docs/consumers/" title="Consumers" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/hub_api_docs/agencies/" title="Agencies" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

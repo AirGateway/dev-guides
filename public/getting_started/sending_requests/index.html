@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Hub API Docs :: AirGateway NDC APIs Development Guide</title>
+    <title>Sending Requests :: AirGateway NDC APIs Development Guide</title>
 
     
     <link href="/css/nucleus.css?1613069331" rel="stylesheet">
@@ -44,7 +44,7 @@
 
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
-  <body class="" data-url="/hub_api_docs/">
+  <body class="" data-url="/getting_started/sending_requests/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -87,7 +87,7 @@
   
     
     <li data-nav-id="/getting_started/" title="Getting Started" class="dd-item 
-        
+        parent
         
         
         ">
@@ -142,8 +142,8 @@
   
     
     <li data-nav-id="/getting_started/sending_requests/" title="Sending Requests" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/getting_started/sending_requests/">
@@ -251,8 +251,8 @@
   
     
     <li data-nav-id="/hub_api_docs/" title="Hub API Docs" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/hub_api_docs/">
@@ -582,6 +582,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
                   <span class="links">
                     
           
@@ -590,7 +592,13 @@
             
           
           
-            <a href='/'>Home</a> > Hub API Docs
+            
+            
+          
+          
+            <a href='/'>Home</a> > <a href='/getting_started/'>Getting Started</a> > Sending Requests
+          
+        
           
         
           
@@ -598,35 +606,57 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents"></nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
 
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>Sending Requests</h1>
           
 
         
 
 
-<h1 id="hub-api-docs">Hub API Docs</h1>
-<p>We offer an API for provisioning credentials so you can easily create new consumers, agencies and agents in our systems.</p>
-<p>You can use this API to manage Agencies, Agents, Consumers and Users in your organizations. You can list our providers, Plans and the APIs we offer, as long as create new tokens for your agents so they can consume our services.</p>
-<p>If you are interested in using this API, please contact us.</p>
+<p>We use <strong>HTTP/1.1</strong> as communication protocol to accept requests to the gateway. All NDC requests are sent using the <strong>POST</strong> HTTP method.</p>
+<p>The public endpoint to our <strong>NDC Gateway</strong> remains immutable for all NDC requests and it is:</p>
 <ul>
-<li><strong>V1.0</strong> <a href="https://hub.airgateway.net/api/static/swagger-ui/#/">https://hub.airgateway.net/api/static/swagger-ui/#/</a></li>
+<li><strong>Version 1</strong>: (deprecated)</li>
+<li><strong>Version 1.1</strong>: <a href="https://proxy.airgateway.net/v1.1/">https://proxy.airgateway.net/v1.1/</a></li>
 </ul>
-<p>You can see a workflow example in this chapter</p>
+<p>We require some mandatory basic HTTP headers intended for message formatting:</p>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: application/json</li>
+<li><strong>Authorization</strong>: XXXXXXXXXXXXX. You&rsquo;ll have to send your API token here or you won&rsquo;t be able to use AirGateway.</li>
+</ul>
+<p>We accept some extra headers to change default behaviour:</p>
+<ul>
+<li><strong>AG-Providers</strong>: value. Check multi-provider and single-provider requests pages for more information. You&rsquo;ll use &ldquo;*&rdquo; to request all your providers offers and the IATA code to select specific airlines (BA, IB, AA, LH&hellip;).</li>
+<li><strong>AG-Connection</strong>: keep-alive. This will return data streamed as soon as we receive the response from the airlines instead of waiting to have all airlines responses before returning data.</li>
+<li><strong>AG-Session-ID</strong>: XXXXX-XXXXX-XXXXXX. With the first request for a session (usually, an AirShopping) you&rsquo;ll receive a <strong>AG-Session-ID</strong> header in response. You should use this header to allow us track full sessions combined with next header.</li>
+<li><strong>AG-Trace</strong>: true. This is only accepted in sandbox environment and should only be used for debug purposes. If you experience any issue, please send your example requests with this header and using the same <strong>AG-Session-ID</strong> header. Then please, share the <strong>AG-Session-ID</strong> with us when reporting issue.</li>
+<li><strong>AG-Per-Provider-Limit</strong>: max number of offers received for each provider.</li>
+</ul>
+<p>It&rsquo;s very relevant to distinguish between two types of requests to send to the <strong>NDC Gateway</strong>. Attending to the architecture, we have two types of requests with significant differences between them:</p>
+<ul>
+<li><strong>MPR</strong> (Multiple provider requests)</li>
+<li><strong>SPR</strong> (Single provider requests)</li>
+</ul>
 
 
 <footer class=" footline" >
 	
 </footer>
 
-        
-            </div> 
         
         </div>
         
@@ -658,107 +688,6 @@
             
                 
                     
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -794,6 +723,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -809,6 +739,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -903,6 +836,104 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -929,10 +960,10 @@
 
 
         
-            <a class="nav nav-prev" href="/ndc_json_api_docs/" title="NDC APIs Docs"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/getting_started/authentication/" title="Authentication"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/hub_api_docs/consumers/" title="Consumers" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/getting_started/multi-provider_requests/" title="Multi-provider requests" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

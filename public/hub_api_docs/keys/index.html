@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Hub API Docs :: AirGateway NDC APIs Development Guide</title>
+    <title>Keys :: AirGateway NDC APIs Development Guide</title>
 
     
     <link href="/css/nucleus.css?1613069331" rel="stylesheet">
@@ -44,7 +44,7 @@
 
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
-  <body class="" data-url="/hub_api_docs/">
+  <body class="" data-url="/hub_api_docs/keys/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -252,7 +252,7 @@
     
     <li data-nav-id="/hub_api_docs/" title="Hub API Docs" class="dd-item 
         parent
-        active
+        
         
         ">
       <a href="/hub_api_docs/">
@@ -358,8 +358,8 @@
   
     
     <li data-nav-id="/hub_api_docs/keys/" title="Keys" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/hub_api_docs/keys/">
@@ -582,6 +582,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
                   <span class="links">
                     
           
@@ -590,7 +592,13 @@
             
           
           
-            <a href='/'>Home</a> > Hub API Docs
+            
+            
+          
+          
+            <a href='/'>Home</a> > <a href='/hub_api_docs/'>Hub API Docs</a> > Keys
+          
+        
           
         
           
@@ -598,35 +606,43 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents"></nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
 
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>Keys</h1>
           
 
         
 
 
-<h1 id="hub-api-docs">Hub API Docs</h1>
-<p>We offer an API for provisioning credentials so you can easily create new consumers, agencies and agents in our systems.</p>
-<p>You can use this API to manage Agencies, Agents, Consumers and Users in your organizations. You can list our providers, Plans and the APIs we offer, as long as create new tokens for your agents so they can consume our services.</p>
-<p>If you are interested in using this API, please contact us.</p>
+<p>This is the last step you need before you start sending requests to our JSON API. Every agent can have a key for each of our offered plans. For example, we offer a plan for our JSON API v1.0 and another for JSON API v1.1, so one agent could have a token for each of these.</p>
+<hr>
+<p>Each <a href="https://hub.airgateway.net/api/static/swagger-ui/#!/Agent_Keys/post_keys">Key</a> will be created with some information, including:</p>
 <ul>
-<li><strong>V1.0</strong> <a href="https://hub.airgateway.net/api/static/swagger-ui/#/">https://hub.airgateway.net/api/static/swagger-ui/#/</a></li>
+<li><a href="https://hub.airgateway.net/api/static/swagger-ui/#!/Plans/get_plans">Plan id</a></li>
+<li>Agent id</li>
 </ul>
-<p>You can see a workflow example in this chapter</p>
+<p>Once you have a token for an agent, you can start calling the JSON API using it impersonating your agents as it&rsquo;s explained <a href="https://dev-guides.airgateway.net/getting_started/authentication/">here</a>.</p>
+<blockquote>
+<p>All these steps can be done via our own hub application which you&rsquo;ll have access to</p>
+</blockquote>
 
 
 <footer class=" footline" >
 	
 </footer>
 
-        
-            </div> 
         
         </div>
         
@@ -826,6 +842,76 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                 
                 
 
@@ -856,72 +942,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
 
@@ -929,10 +949,10 @@
 
 
         
-            <a class="nav nav-prev" href="/ndc_json_api_docs/" title="NDC APIs Docs"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/hub_api_docs/agents/" title="Agents"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/hub_api_docs/consumers/" title="Consumers" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/webhooks/" title="Webhooks" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

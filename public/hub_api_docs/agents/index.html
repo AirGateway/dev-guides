@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Hub API Docs :: AirGateway NDC APIs Development Guide</title>
+    <title>Agents :: AirGateway NDC APIs Development Guide</title>
 
     
     <link href="/css/nucleus.css?1613069331" rel="stylesheet">
@@ -44,7 +44,7 @@
 
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
-  <body class="" data-url="/hub_api_docs/">
+  <body class="" data-url="/hub_api_docs/agents/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -252,7 +252,7 @@
     
     <li data-nav-id="/hub_api_docs/" title="Hub API Docs" class="dd-item 
         parent
-        active
+        
         
         ">
       <a href="/hub_api_docs/">
@@ -332,8 +332,8 @@
   
     
     <li data-nav-id="/hub_api_docs/agents/" title="Agents" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/hub_api_docs/agents/">
@@ -582,6 +582,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
                   <span class="links">
                     
           
@@ -590,7 +592,13 @@
             
           
           
-            <a href='/'>Home</a> > Hub API Docs
+            
+            
+          
+          
+            <a href='/'>Home</a> > <a href='/hub_api_docs/'>Hub API Docs</a> > Agents
+          
+        
           
         
           
@@ -598,35 +606,75 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#authenticating-agents">Authenticating agents</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
 
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>Agents</h1>
           
 
         
 
 
-<h1 id="hub-api-docs">Hub API Docs</h1>
-<p>We offer an API for provisioning credentials so you can easily create new consumers, agencies and agents in our systems.</p>
-<p>You can use this API to manage Agencies, Agents, Consumers and Users in your organizations. You can list our providers, Plans and the APIs we offer, as long as create new tokens for your agents so they can consume our services.</p>
-<p>If you are interested in using this API, please contact us.</p>
+<p>Finally, each agency can have many agents working there. We use this entity you trace the whole selling process to every user involved. When a user logs into your system, you&rsquo;ll have to send his/her key (token) credential so we can know who&rsquo;s performing the action and what consumer he/she belongs to (check Authentication in Gettin Started chapter).</p>
+<hr>
+<p><a href="https://hub.airgateway.net/api/static/swagger-ui/#!/Agents/post_agents">Agents</a> have some specific information about the user, but these are the most relevant:</p>
 <ul>
-<li><strong>V1.0</strong> <a href="https://hub.airgateway.net/api/static/swagger-ui/#/">https://hub.airgateway.net/api/static/swagger-ui/#/</a></li>
+<li>Username</li>
+<li>Email</li>
+<li>Agency id</li>
+<li>Password</li>
 </ul>
-<p>You can see a workflow example in this chapter</p>
+<p>If you ever want your users to login in our Bookingpad app directly, you&rsquo;ll have to share with them their username, agency name and password. You can check more information about <a href="https://github.com/AirGateway/bookingpad-app">Bookingpad authentication in the open source project</a>.</p>
+<blockquote>
+<p>All these steps can be done via our own hub application which you&rsquo;ll have access to</p>
+</blockquote>
+<h2 id="authenticating-agents">Authenticating agents</h2>
+<p>In our bookingpad tool, agents can login using their username, agency and password. But sometimes, your needs include your users login only on your own app (which uses our JSON API) and you want them to use bookingpad only for something that your own app doesn&rsquo;t support (check <a href="https://dev-guides.airgateway.net/hub_api_docs">https://dev-guides.airgateway.net/hub_api_docs</a> to know how to create agents in your organization, you&rsquo;ll need to store all the agents information in your app).	 You can use our own bookingpad or a different instance you have in your servers, in this case we&rsquo;ll use our own bookingpad instance domain.
+You can achieve this by using following process:</p>
+<ul>
+<li>
+<p>Obtain access token for the user you want to auto-authenticate</p>
+<ol>
+<li>Call <a href="https://app.airgateway.net/api/login">https://app.airgateway.net/api/login</a></li>
+<li>Send username, agencyID and password of the user you want to get the access token as data-binary</li>
+<li>Example: <code>curl 'https://app.airgateway.net/api/login' -H 'pragma: no-cache' -H 'origin: https://yourdomain.com' -H 'accept-encoding: gzip, deflate, br' -H 'accept-language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,de;q=0.6,it;q=0.5' -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' -H 'content-type: application/json;charset=UTF-8' -H 'accept: application/json, text/plain, */*' -H 'cache-control: no-cache' -H 'authority: app.airgateway.net' -H 'referer: https://yourdomain.com' --data-binary '{&quot;username&quot;:&quot;agent&quot;, &quot;agencyID&quot;:&quot;agency&quot;, &quot;password&quot;:&quot;XXXXXXX&quot;}' --compressed</code></li>
+<li>In order to make this work, please let us know the domain you&rsquo;ll call us from</li>
+</ol>
+</li>
+<li>
+<p>You&rsquo;ll receive an access token in the response which you&rsquo;ll have to add to the url you&rsquo;ll redirect your user to:</p>
+<ul>
+<li><a href="https://app.airgateway.net/login?access_token=XXXXXXXXXXXXXX">https://app.airgateway.net/login?access_token=XXXXXXXXXXXXXX</a></li>
+</ul>
+</li>
+<li>
+<p>If you want to send your users to our bookingpad once they have finished creating an order, so they can add ancillaries or seats, you can use &ldquo;redirect_url&rdquo; so once they are auto-logged they will be redirected to the page with the order they created:</p>
+<ul>
+<li><a href="https://app.airgateway.net/login?access_token=XXXXXXXXXXXXXX&amp;redirect_url=https://app.airgateway.net/orders/LH/AGW-XXXXXXX">https://app.airgateway.net/login?access_token=XXXXXXXXXXXXXX&amp;redirect_url=https://app.airgateway.net/orders/LH/AGW-XXXXXXX</a></li>
+</ul>
+</li>
+</ul>
 
 
 <footer class=" footline" >
 	
 </footer>
 
-        
-            </div> 
         
         </div>
         
@@ -810,6 +858,76 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
                 
                 
 
@@ -856,72 +974,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
 
@@ -929,10 +981,10 @@
 
 
         
-            <a class="nav nav-prev" href="/ndc_json_api_docs/" title="NDC APIs Docs"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/hub_api_docs/agencies/" title="Agencies"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/hub_api_docs/consumers/" title="Consumers" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/hub_api_docs/keys/" title="Keys" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
