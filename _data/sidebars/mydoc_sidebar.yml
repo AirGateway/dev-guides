@@ -56,6 +56,10 @@ entries:
             url: /servicing.html
             output: web, pdf
 
+          - title: Postman Doc
+            url: /postman.html
+            output: web, pdf
+
       - title: Partners API Docs
         url: /Hub_API_Docs.html
         output: web, pdf
