@@ -14,6 +14,7 @@ We currently track these events:
 - OrderTicketed
 - OrderStarted (Time of first flight has passed)
 - OrderCompleted (Time of last flight has passed)
+- OrderDisrupted
 - ItineraryChange
 - ServicesAddition
 - ServicesRemoval
