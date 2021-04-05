@@ -28,13 +28,14 @@ This is a table of our Providers (NDC Airlines) content displaying their capabil
 | **KL**        | :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | :seat: :baggage_claim: | \- | \- | :globe_with_meridians: | :moneybag: :credit_card: |  <span style="color:orange">**Cert**</span> |
 | **EY**        | :white_check_mark: | :white_check_mark: | :white_check_mark: | \- | :seat: :baggage_claim: | \- | \- | :globe_with_meridians: | :moneybag: |  <span style="color:orange">**Cert**</span> |
 | **QR**        | :white_check_mark: | :white_check_mark: | :white_check_mark: | \- | :seat: :baggage_claim: | \- | \- | :globe_with_meridians: | :moneybag: |  Implem. |
+| **AC**        | :white_check_mark: | :white_check_mark: | :white_check_mark: | \- | :seat: | \- | \- | :globe_with_meridians: | :moneybag: |  <span style="color:orange">**Cert**</span> |
+| **WS**        | :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | :seat: :baggage_claim: | :date: | :white_check_mark: | :globe_with_meridians: :closed_lock_with_key: :chart_with_upwards_trend: | :moneybag: :credit_card: | Implem. |
 | **EI**        | :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | :seat: :baggage_claim: | \- | \- | :globe_with_meridians: | :credit_card: | <span style="color:red">**Hold**</span> |
-| **BR**        | :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | :seat: :baggage_claim: | \- | \- | :globe_with_meridians: | :credit_card: | <span style="color:red">**Hold**</span> |
+| **BR**        | :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | :seat: :baggage_claim: | \- | \- | :globe_with_meridians: | :credit_card: | Implem. |
 | **WY**        | :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | \- | \- | \- | :globe_with_meridians: | :credit_card: | Implem. |
 | **SV**        | :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | \- | \- | \- | :globe_with_meridians: | :credit_card: | Implem. |
-| **WS**        | :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | :seat: :baggage_claim: | :date: | :white_check_mark: | :globe_with_meridians: :closed_lock_with_key: :chart_with_upwards_trend: | :moneybag: :credit_card: | <span style="color:red">**Hold**</span> |
-| **AC**        | :white_check_mark: | :white_check_mark: | :white_check_mark: | \- | :seat: | \- | \- | :globe_with_meridians: | :moneybag: |  <span style="color:red">**Hold**</span> |
-| **AV**        | :white_check_mark: | :white_check_mark: | :white_check_mark: | \- | :seat: | \- | \- | :globe_with_meridians: | :moneybag: |  <span style="color:red">**Hold**</span> |
+| **AV**        | :white_check_mark: | :white_check_mark: | :white_check_mark: | \- | \- | \- | \- | :globe_with_meridians: | \- |  Implem. |
+| **LA**        | :white_check_mark: | :white_check_mark: | :white_check_mark: | \- | \- | \- | \- | :globe_with_meridians: | \- |  Implem. |
 
 ---
 
