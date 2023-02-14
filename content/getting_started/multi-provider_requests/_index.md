@@ -29,9 +29,11 @@ To enabled streaming mode (strongly recommended for GUI Applications) it's requi
 
  - **AG-Connection**: keep-alive
 
-And optionally, for the streaming mode a timeout in the server-side can be set upon request of the client.
+And optionally, for the streaming mode a timeout in the server-side can be set upon request of the client to set a maximum request lifetime.
 
- - **Keep-Alive:** timeout=xx (where xx is an integer number in seconds)
+ - **Ag-Request-Timeout:** X (where x is an integer number in seconds)
+
+Using this header will let you get all the results received in the first X seconds. For example, if airline 1 returns results in 5 seconds and airline 2 returns results in 10 seconds, if we setup timeout to 6 seconds we'll receive all results from airline 1 but no results from airline 2.
 
 
 **Important note**
